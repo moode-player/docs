@@ -1,5 +1,5 @@
 Building Debian packages <!-- omit in toc -->
-=================================
+=============================================
 by @bitlab (c) 2021
 
 This developer guide describes how `Debian` packages are used in moOde.

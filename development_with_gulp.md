@@ -1,5 +1,5 @@
 Development with Gulp <!-- omit in toc -->
-======================================================
+==========================================
 by @bitlab (c) 2021
 
 This developer guide explains how to use the `Gulp toolkit` to automate building the moOde front-end.
@@ -476,7 +476,7 @@ Mac
 
 Gulp optimizes the build and deploy by only updating new files. In case the file in the deploy location is newer than the source it is by default not overwritten. Use the argument `–force` to always update.
 
-## 6.4. Error `System limit for number of file watchers reached` on watch
+## 6.4. Error: System limit for number of file watchers reached on watch
 
 If you get this error on the Raspberry Pi you can increase the number of files allowed using the command below
 
