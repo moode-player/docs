@@ -1,15 +1,16 @@
-moOde - Developer manual building Debian packages <!-- omit in toc -->
+Building Debian packages <!-- omit in toc -->
 =================================
-by bitlab
+by @bitlab (c) 2021
+
+This developer guide describes how `Debian` packages are used in moOde.
 
 ### Table of Contents <!-- omit in toc -->
-
 - [1. Introduction](#1-introduction)
 - [2. moOde vs Debian packages](#2-moode-vs-debian-packages)
 - [3. Debian packages](#3-debian-packages)
   - [3.1. Introduction](#31-introduction)
   - [3.2. Using several package managers](#32-using-several-package-managers)
-  - [3.3. Update list available packages](#33-update-list-available-packages)
+  - [3.3. Update list of available packages](#33-update-list-of-available-packages)
   - [3.4. Install package](#34-install-package)
   - [3.5. Uninstall package](#35-uninstall-package)
   - [3.6. Package information](#36-package-information)
@@ -40,29 +41,26 @@ by bitlab
 
 
 # 1. Introduction
-This document describes the use of moOde with Debian packages.
 
-Using packages, among others, the following benefits:
+Using packages provides the following benefits:
 * Easy install/upgrade/downgrade/remove of software components.
 * Use of a package manager and a package repository.
 * Insight in the installed packages.
 * Uniform way of providing software components.
 * Automatic dependencies management (like downloading the required dependencies and preventing update/remove.
 * Decouple building from the moOde release.
-* Which results in easier development of moOde release and updates.
+* Easier development of moOde releases and updates.
 
-
-It should answers question about:
+This guide should answer question about:
 * Using the repo/packages
 * Building packages
 * Placing packages in the repo
 
-It doesn't try or even pretend to be an expert document about this topic.
-A lot of information is available on the net about using and building Debian packages.
+For additional detailed information about Debian packaging refer to the wide variety of Internet resources that are available.
 
 # 2. moOde vs Debian packages
 
-moOde is base on the Debian distribution raspbian OS. This document is written in mind with the migration of moOde from buster (moOde 7.x) to bullseye (moOde 8.x).
+moOde is base on the Debian distribution named Raspberry Pi OS (formerly Raspbian). This document is written in mind with the migration of moOde 7 series from Raspberry Pi OS (Buster) to Raspberry Pi OS (Bullseye) for moOde 8 series.
 
 moOde exists out-of 3 major parts:
 1. Raspbian OS + additional stock packages
@@ -476,4 +474,3 @@ You have to provide all three parts of the source packge to the cloudsmith push 
 ```
 cloudsmith push deb moodeaudio/m8x/raspbian/bullseye ./foobar_1.0.0-1~moode~bullseye.dsc --sources-file foobar_1.0.0.orig.tar.gz  --changes-file foobar_1.0.0-1~moode~bullseye.debian.tar.xz
 ```
-

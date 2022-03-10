@@ -1,6 +1,8 @@
-moOde - Building moode-player package <!-- omit in toc -->
+Building the moode-player package <!-- omit in toc -->
 ======================================================
-by bitlab '21
+by @bitlab (c) 2021
+
+This developer guide explains how to build the `moOde-player` package from sources.
 
 ### Table of Contents <!-- omit in toc -->
 - [1. Pre conditions](#1-pre-conditions)
@@ -14,8 +16,6 @@ by bitlab '21
 - [3. Installing the moode-player package](#3-installing-the-moode-player-package)
   - [3.1. Local Installation on a fresh running debian image](#31-local-installation-on-a-fresh-running-debian-image)
   - [3.2. Installation from a repo on a fresh running debian image :](#32-installation-from-a-repo-on-a-fresh-running-debian-image-)
-
-This document explains how to build the `moode-player` package from source.
 
 # 1. Pre conditions
 Assumed you performing the build from a running Raspberry Pi OS bullseye.
