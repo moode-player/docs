@@ -1,10 +1,12 @@
 Building Debian packages <!-- omit in toc -->
 =============================================
-by @bitlab (c) 2021
+By: @bitlab (c) 2021
+Updated: 2022-03-10
 
 This developer guide describes how `Debian` packages are used in moOde.
 
 ### Table of Contents <!-- omit in toc -->
+
 - [1. Introduction](#1-introduction)
 - [2. moOde vs Debian packages](#2-moode-vs-debian-packages)
 - [3. Debian packages](#3-debian-packages)
@@ -38,7 +40,6 @@ This developer guide describes how `Debian` packages are used in moOde.
   - [6.1. How to upload](#61-how-to-upload)
   - [6.2. Uploading binary package](#62-uploading-binary-package)
   - [6.3. Upload source package](#63-upload-source-package)
-
 
 # 1. Introduction
 

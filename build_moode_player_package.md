@@ -1,10 +1,12 @@
 Building the moode-player package <!-- omit in toc -->
 ======================================================
-by @bitlab (c) 2021
+By: @bitlab (c) 2021
+Updated: 2022-03-10
 
 This developer guide explains how to build the `moOde-player` package from sources.
 
 ### Table of Contents <!-- omit in toc -->
+
 - [1. Pre conditions](#1-pre-conditions)
 - [2. Building the package](#2-building-the-package)
   - [2.1. Where and how to make changes to the package](#21-where-and-how-to-make-changes-to-the-package)
