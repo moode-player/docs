@@ -1,5 +1,5 @@
-Building the moode-player package <!-- omit in toc -->
-======================================================
+Build the moode-player package <!-- omit in toc -->
+===================================================
 By: @bitlab (c) 2021
 Updated: 2022-03-10
 
