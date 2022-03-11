@@ -13,9 +13,9 @@ This guide provides information on how to get started developing for moOde.
 
 # 1. Overview
 
-moOde audio player is a Web application consisting of a front-end UI written in HTML/CSS and Javascript, and a back-end player wrapper for Music Player Daemon (MPD) written in PHP. The back-end uses the SQLite3 database engine and a variety of utilities written in PHP, BASH and Python. AJAX and PHP templates are used for sending data between the front-end and back-end and the data format is either $_POST associative arrays or JSON.
+moOde audio player is a Web application consisting of a front-end UI written in HTML/CSS and Javascript, and a back-end wrapper for Music Player Daemon (MPD) written in PHP plus a variety of utilities written in PHP, BASH and Python. AJAX and PHP templates are used for sending data between the front-end and back-end. The data format is either $_POST associative arrays or JSON.
 
-The Bootstrap and JQuery frameworks are used for front-end implementation. The Zend Media framework is used in the back-end for extracting embedded cover art images from FLAC, MP3 and M4A audio file formats. The Web stack used is NGINX on top of PHP-FPM.
+Bootstrap and JQuery frameworks are used for front-end implementation. The Zend Media framework is used in the back-end for extracting embedded cover art images from FLAC, MP3 and M4A audio file formats. The Web stack uses NGINX, SQLite3 and PHP-FPM.
 
 # 2. The repositories
 
@@ -31,7 +31,7 @@ To start developing for moOde it's necessary to first become familiar with the s
 
 # 3. Reference materials
 
-The following reference materials are available that provide details on the structure of moOde and on how to use the build tooling to generate the front-end and back-end, build packages and build the ISO image.
+The following reference materials provide details on the structure of moOde and on how to use the Build Tooling to generate the front-end and back-end, configure and build packages and build the ISO image.
 
 |Document|Description|
 | :- | :- |
