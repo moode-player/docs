@@ -38,4 +38,4 @@ The following reference materials provide details on the structure of moOde and 
 |[Development with Gulp](https://github.com/moode-player/docs/blob/main/development_with_gulp.md)|This developer guide explains how to use the `Gulp toolkit` to automate building the moOde front-end.|
 |[Building Debian packages](https://github.com/moode-player/docs/blob/main/building_debian_packages.md)|This developer guide describes how `Debian` packages are used in moOde.|
 |[Build the moode-player package](https://github.com/moode-player/docs/blob/main/build_moode_player_package.md)|his developer guide explains how to build the `moOde-player` package from sources.|
-|[moOde audio infrastructure](https://github.com/moode-player/docs/blob/main/mode_audio_infrastructure.md)|This document describes the audio infrastructure of moOde audio player.|
+|[moOde audio infrastructure](https://github.com/moode-player/docs/blob/main/moode_audio_infrastructure.md)|This document describes the audio infrastructure of moOde audio player.|
