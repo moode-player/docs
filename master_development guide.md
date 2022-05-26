@@ -35,6 +35,7 @@ The following reference materials provide details on the structure of moOde and 
 
 |Document|Description|
 | :- | :- |
+|[Source tree](https://github.com/moode-player/docs/blob/main/moode_source_tree.md)|Function of each directory and file in the moode repository source tree|
 |[Development with Gulp](https://github.com/moode-player/docs/blob/main/development_with_gulp.md)|This developer guide explains how to use the `Gulp toolkit` to automate building the moOde front-end.|
 |[Building Debian packages](https://github.com/moode-player/docs/blob/main/building_debian_packages.md)|This developer guide describes how `Debian` packages are used in moOde.|
 |[Build the moode-player package](https://github.com/moode-player/docs/blob/main/build_moode_player_package.md)|his developer guide explains how to build the `moOde-player` package from sources.|
