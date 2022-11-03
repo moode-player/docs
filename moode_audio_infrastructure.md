@@ -20,7 +20,7 @@ This document describes the audio infrastructure of moOde audio player.
 
 moOde audio player is based on the Music Player Daemon (MPD) music server/renderer and the Advanced Linux Sound Architecture (ALSA). MPD provides a music collection tag database, audio format decoding and playback and much more. ALSA provides a low latency, direct interface between audio output and the audio device.
 
-In addition there are several other audio renderers integrated into moOde including Bluetooth, Airplay, Spotify Connect, Squeezelite and optionally RoonBridge. These enable playback from a wide variety of music sources.
+In addition there are several other audio renderers integrated into moOde including Bluetooth, AirPlay, Spotify Connect, Squeezelite and optionally RoonBridge. These enable playback from a wide variety of music sources.
 
 Lastly, a UPnP proxy client for MPD is integrated into moOde. This enables certain non-free music services to use moOde as an audio renderer with middleware like Bubble UPnP.
 
@@ -30,7 +30,7 @@ The image below shows a high level view of the audio infrastructure.
 
 ![](images/moode_audio_chain.png)
 
-The blue blocks are possible audio sources. The first three sources are inputs to MPD and have the most features. Second are Spotify and Airplay. Bluetooth, LMS Client and Roon Bridge, can only be used the configured audio device, moOde doesn’t provide any DSP options for those. LMS an Roon provide there own DSP functions.
+The blue blocks are possible audio sources. The first three sources are inputs to MPD and have the most features. Second are Spotify and AirPlay. Bluetooth, LMS Client and Roon Bridge, can only be used the configured audio device, moOde doesn’t provide any DSP options for those. LMS an Roon provide there own DSP functions.
 
 # 3. ALSA and MPD Digital Signal Processing (DSP) components
 
