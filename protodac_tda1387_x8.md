@@ -9,7 +9,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
 ### Table of Contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
-- [2. Printed Circuit Board (PCB)](#2-printed-circuit-board-(PCB))
+- [2. Printed Circuit Board (PCB)](#2-printed-circuit-board-pcb)
   - [2.1. PCB Layout](#21-pcb-layout)
   - [2.2. Schematic](#22-schematic)
   - [2.3. Pin assignments](#23-pin-assignments)
@@ -142,4 +142,4 @@ Boutique film capacitors can be very expensive and are often too large for the a
 
 # 5. moOde configuration
 
-# 6 Appendix
+# 6. Appendix
