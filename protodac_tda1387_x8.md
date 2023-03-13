@@ -55,7 +55,7 @@ The Computer Aided Design (CAD) drawing of the PCB shows the board layout and lo
 
 Paragraph goes here
 
-![](images/protodac_schematic_v1.jpg)
+![](images/protodac_schematic_v2.jpg)
 
 ## 2.3 Pin assignments
 
