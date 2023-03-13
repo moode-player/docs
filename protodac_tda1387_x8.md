@@ -9,8 +9,8 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
 ### Table of Contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
-- [2. Printed Circuit Board (PCB)](#2-printed-circuit-board)
-  - [2.1. PCB Layout](#21-pcb)
+- [2. Printed Circuit Board (PCB)](#2-printed-circuit-board-(PCB))
+  - [2.1. PCB Layout](#21-pcb-layout)
   - [2.2. Schematic](#22-schematic)
   - [2.3. Pin assignments](#23-pin-assignments)
 - [3. Component parts](#3-component-parts)
