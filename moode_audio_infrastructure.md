@@ -9,7 +9,7 @@ This document describes the audio infrastructure of moOde audio player.
 
 - [1. Introduction](#1-introduction)
 - [2. The audio chain](#2-the-audio-chain)
-- [3. ALSA Digital Signal Processing (DSP) components](#3-alsa- digital-signal-processing-dsp-components)
+- [3. ALSA Digital Signal Processing (DSP) components](#3-alsa-digital-signal-processing-dsp-components)
   - [3.1. ALSA DSP components](#31-alsa-dsp-components)
   - [3.2. MPD integrated DSP](#32-mpd-integrated-dsp)
 - [4. The audio path](#4-the-audio-path)
