@@ -24,7 +24,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
 - [5. moOde configuration](#5-moode-configuration)
   - [5.1. Audio Config](#51-audio-config)
   - [5.2. CamillaDSP](#52-camilladsp)
-  - [5.3. MPD/SoX](#53-camilladsp)
+  - [5.3. MPD and SoX](#53-mpd-and-sox)
 - [6. Appendix)
 
 # 1. Introduction
@@ -138,6 +138,8 @@ A basic polypropylene metallized film capacitor is a WIMA MKP4 or MKP10 with rad
 
 Boutique film capacitors can be very expensive and are often too large for the available space on the HAT. Metallized polypropylene tend to be the best value.
 
-# 4. moOde configuration
+# 4. Assembly and Testing
 
-# 5. Appendix
+# 5. moOde configuration
+
+# 6 Appendix
