@@ -27,7 +27,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [5.3. MPD and SoX](#53-mpd-and-sox)
 - [6. Appendix)
   - [6.1. PCB reference designators](#61-pcb-reference-designators)
-  - [6.2. Acronyms](#61-acronyms)
+  - [6.2. Acronyms](#62-acronyms)
 
 # 1. Introduction
 
@@ -175,10 +175,10 @@ Boutique film capacitors can be very expensive and are often too large for the a
 
 |Designator|Description|
 |:-|:-|
-|C|Capacitors|
-|J|Connectors|
-|R|Resistors|
-|U|Integrated circuits|
+|C|Capacitor|
+|J|Connector|
+|R|Resistor|
+|U|Integrated Circuit (IC)|
 
 ## 6.2 Acronums
 
