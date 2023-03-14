@@ -14,8 +14,8 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [2.2. Schematic](#22-schematic)
   - [2.3. Pin assignments](#23-pin-assignments)
 - [3. Component parts](#3-component-parts)
-  - [3.1. I/V resistors](#31-iv-resistors)
-  - [3.2. I2S resistors](#32-i2s-resistors)
+  - [3.1. Current to Voltage (I/V) resistors](#31-current-to-volatge-iv-resistors)
+  - [3.2. Integrated Interchip Sound (I2S) resistors](#32-integrated-interchip-sound-i2s-resistors)
   - [3.3. Electrolytic decoupling capacitors](#33-electrolytic-decoupling-capacitors)
   - [3.4. Output coupling capacitors](#34-output-coupling-capacitors)
 - [4. Assembly and testing](#4-assembly-and-testing)
@@ -49,7 +49,17 @@ The PCB dimensions and layout conform to the Raspberry Pi "Hardware Attached on 
 
 The Computer Aided Design (CAD) drawing of the PCB shows the board layout and location of the component parts. The design allows for several variations including axial or radial output I/V capacitors and RCA jacks or direct wiring to L/R channels.
 
-![](images/protodac_pcb_rev2_500.jpg)
+![](images/protodac_pcb_rev2a_500.jpg)
+
+|Identifier|Component|
+|:-|:-|
+|U1|2X20P Female Header 40 Position Header Connector 0.100" (2.54mm) Through Hole Gold  DigiKey S7123-ND or eBay/AliExpress|
+|U2|TDA1387 x 8 Parallel Module Replacement Substitution for TDA1541. Available on eBay/AliExpress search "tda1387 tda1541" or "hifi 8pcs tda1387"|
+|U3,U4|Audio grade bulk metal foil resistor, through hole 420R Texas Components TX2352 or TX2575 https://www.texascomponents.com/store/home.asp or Charcroft in EU|
+|c2|RCA Jacks. CA right angle PCB mount RJ-255A. Available on eBay/AliExpress search "RCA PCB DAC"|
+|C3,C4|Audio grade electrolytic capacitors 1000uF 6.3V Nichicon UKA, Panasonic FR-A 10mm diameter and 5mm lead spacing.|
+|C6|Output capacitor options: 4.7-10uF polypropylene film capacitor. Radial leads with 37.5mm LS, and axial leads with 49mm LS using RCA jacks, and up to 54mm LS without output RCA jacks.|
+|R1-R3|430R or 470R 1/4W generic metal film resistors Stackpole RNMF14FTC430R/RNMF14FTC470R or similar.|
 
 ## 2.2 Schematic
 
@@ -64,7 +74,7 @@ Paragraph goes here
 ### I2S Inputs
 
 |X8 Module pin|I2S|GPIO number|Broadcom pin|
-| :- | :- | :- | :- |
+|:-|:-|:-|:-|
 |1|WS(LRCK)|19|35|
 |2|__BCK__|18|12|
 |3|DATA|21|40|
@@ -76,13 +86,27 @@ Paragraph goes here
 
 The module is implemented as a 28 pin DIP/DIL package. The module is only connected by pins 1,2,3,4,5,6,25 and 28. Note that pins 2 and 4 are internally connected.
 
-|Pin|Function|Pin|Function|
-| :- | :- |:- | :- |
-|1|WS (LRCK)|6|Right channel audio out|
-|2|BCK|7-24|N/C|
-|3|DATA|25|Left channel audio out|
-|4|BCK|26-27|N/C|
-|5|GND|28|Vcc +5VDC|
+<table><tr><td style="border:none;">
+
+|Pin|Function|
+|:-|:-|
+|1|WS (LRCK)|
+|2|BCK|
+|3|DATA|
+|4|BCK|
+|5|GND|
+
+</td><td style="border:none;">
+
+|Pin|Function|
+|:-|:-|
+|6|Right channel audio out|
+|7-24|N/C|
+|25|Left channel audio out|
+|26-27|N/C|
+|28|Vcc +5VDC|
+
+</td></tr></table>
 
 ![](images/protodac_module_dip_dil_v4.jpg)
 
@@ -90,15 +114,15 @@ The module is implemented as a 28 pin DIP/DIL package. The module is only connec
 
 Component parts for the DAC are readily available from various suppliers but since the Philips TDA1387 chips are not produced anymore the 8 x parallel chip module long term availability cannot be guaranteed.
 
-## 3.1 I/V resistors
+## 3.1 Current to Voltage (I/V) resistors
 
-### Type of resistor
+### Resistor type
 
 Vishay naked bulk metal foil are unsurpassed, and sound very transparent with excellent detail. This may be due to the very low noise or noninductive design. The improvement in detail compared to other resistor types is dramatic.
 
 Bulk metal foil can be ordered to spec, but they are expensive. Metal film sound OK, and have the advantage in that they are abundant and cheap. I would recommend starting with metal film to hear the possibilities of the DAC, and then move up to Vishay metal foil resistors (if not Z-foil, then S-foil) if you think the DAC shows promise.
 
-### Value of the resistor
+### Resistor value
 
  This is critical. The I/V resistor should be no larger than 430R for Vcc of 5 VDC. I measured THD with 0 dB 1kHz sine wave input to the DAC with various I/V resistances. See the chart below. Distortion at 223.5R is measured at 0.0080% and at 322R it is 0.0097%, and THD increases linearly with resistance up to just past 430R. Then distortion starts to increase exponentially, indicating clipping.
 
