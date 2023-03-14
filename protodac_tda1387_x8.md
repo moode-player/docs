@@ -31,7 +31,8 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [6.1. PCB reference designators](#61-pcb-reference-designators)
   - [6.2. Acronyms](#62-acronyms)
 
-# 1. Introduction [<span>&blacktriangle;</span>](#toc)
+# 1. Introduction
+
 The ProtoDAC TDA1387 X8 is a DIY DAC based on the vintage Philips TDA1387 multibit DAC chip in an eight chip module as pictured below. The chips are configured in parallel with decoupling capacitors and pin 7 capacitors.
 
 ![](images/protodac_x8_module.jpg)
@@ -43,6 +44,8 @@ The TDA1387 is a very interesting 16-bit design and represents the end of the mu
 The ProtoDAC is one of the easiest NOS DAC's to build. The number of components is low and the circuit design is simple since the TDA1387 directly uses I2S from the Raspberry Pi as input and passive I/V is used for the output stage.
 
 Most importantly, the sound quality of the finished DAC is excellent, especially when using premium components.
+
+[<span style="color:lightgray;">Back to Top</span>](#toc)
 
 # 2. Printed Circuit Board (PCB)
 
@@ -113,6 +116,8 @@ The module is implemented as a 28 pin DIP. The module is only connected by pins 
 
 ![](images/protodac_module_dip_dil_v4.jpg)
 
+[<span style="color:lightgray;">Back to Top</span>](#toc)
+
 # 3. Component parts
 
 Component parts for the DAC are readily available from various suppliers but since the Philips TDA1387 chips are not produced anymore the 8 x parallel chip module long term availability cannot be guaranteed.
@@ -165,9 +170,15 @@ A basic polypropylene metallized film capacitor is a WIMA MKP4 or MKP10 with rad
 
 Boutique film capacitors can be very expensive and are often too large for the available space on the HAT. Metallized polypropylene tend to be the best value.
 
+[<span style="color:lightgray;">Back to Top</span>](#toc)
+
 # 4. Assembly and Testing
 
+[<span style="color:lightgray;">Back to Top</span>](#toc)
+
 # 5. moOde configuration
+
+[<span style="color:lightgray;">Back to Top</span>](#toc)
 
 # 6. Appendix
 
