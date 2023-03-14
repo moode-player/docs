@@ -25,7 +25,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [5.1. Audio Config](#51-audio-config)
   - [5.2. CamillaDSP](#52-camilladsp)
   - [5.3. MPD and SoX](#53-mpd-and-sox)
-- [6. Appendix)
+- [6. Appendix]
   - [6.1. PCB reference designators](#61-pcb-reference-designators)
   - [6.2. Acronyms](#62-acronyms)
 
