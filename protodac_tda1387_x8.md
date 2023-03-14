@@ -8,7 +8,7 @@ Updated: 2023-03-14
 
 This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital to Analog Converter (DAC).
 
-### [Table of Contents](#toc) <!-- omit in toc -->
+### [Table of Contents](#table-of-contents) <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
 - [2. Printed Circuit Board (PCB)](#2-printed-circuit-board-pcb)
@@ -45,7 +45,7 @@ The ProtoDAC is one of the easiest NOS DAC's to build. The number of components 
 
 Most importantly, the sound quality of the finished DAC is excellent, especially when using premium components.
 
-[<span style="color:lightgray;">Back to Top</span>](#toc)
+[Back to Top](#table-of-contents)
 
 # 2. Printed Circuit Board (PCB)
 
@@ -116,7 +116,7 @@ The module is implemented as a 28 pin DIP. The module is only connected by pins 
 
 ![](images/protodac_module_dip_dil_v4.jpg)
 
-[<span style="color:lightgray;">Back to Top</span>](#toc)
+[Back to Top](#table-of-contents)
 
 # 3. Component parts
 
@@ -170,15 +170,15 @@ A basic polypropylene metallized film capacitor is a WIMA MKP4 or MKP10 with rad
 
 Boutique film capacitors can be very expensive and are often too large for the available space on the HAT. Metallized polypropylene tend to be the best value.
 
-[<span style="color:lightgray;">Back to Top</span>](#toc)
+[Back to Top](#table-of-contents)
 
 # 4. Assembly and Testing
 
-[<span style="color:lightgray;">Back to Top</span>](#toc)
+[Back to Top](#table-of-contents)
 
 # 5. moOde configuration
 
-[<span style="color:lightgray;">Back to Top</span>](#toc)
+[Back to Top](#table-of-contents)
 
 # 6. Appendix
 
