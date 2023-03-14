@@ -4,11 +4,11 @@ ProtoDAC TDA1387 X8 <!-- omit in toc -->
 ===============================================
 By: @hifinet (c) 2023  
 Edited by @Tim Curtis  
-Updated: 2023-03-12
+Updated: 2023-03-14
 
 This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital to Analog Converter (DAC).
 
-### Table of Contents <!-- omit in toc -->
+### [Table of Contents](#toc) <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
 - [2. Printed Circuit Board (PCB)](#2-printed-circuit-board-pcb)
@@ -31,8 +31,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [6.1. PCB reference designators](#61-pcb-reference-designators)
   - [6.2. Acronyms](#62-acronyms)
 
-# 1. Introduction
-
+# 1. Introduction [<span>&blacktriangle;</span>](#toc)
 The ProtoDAC TDA1387 X8 is a DIY DAC based on the vintage Philips TDA1387 multibit DAC chip in an eight chip module as pictured below. The chips are configured in parallel with decoupling capacitors and pin 7 capacitors.
 
 ![](images/protodac_x8_module.jpg)
