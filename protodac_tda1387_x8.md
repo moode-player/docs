@@ -55,6 +55,7 @@ The Computer Aided Design (CAD) drawing of the PCB shows the board layout and lo
 
 |Reference designator|Component|Description|
 |:-|:-|:-|
+|C2|?|?
 |C3,C4|Electrolytic capacitors|Audio grade 1000uF 6.3V Nichicon UKA or Panasonic FR-A 10mm diameter and 5mm lead spacing.|
 |C5-C6|Output capacitors|4.7-10uF polypropylene film capacitor. Radial leads with 37.5mm LS, and axial leads with 49mm LS using RCA jacks, and up to 54mm LS without RCA jacks.|
 |R1-R3|Film Resistors|430R or 470R 1/4W generic metal film resistors Stackpole RNMF14FTC430R/RNMF14FTC470R or similar.|
