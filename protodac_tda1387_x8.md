@@ -12,7 +12,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
 - [2. Printed Circuit Board (PCB)](#2-printed-circuit-board-pcb)
   - [2.1. PCB Layout](#21-pcb-layout)
   - [2.2. Schematic](#22-schematic)
-  - [2.3. Pin assignments](#23-pin-assignments)
+  - [2.3. Pin mappings](#23-pin-mappings)
 - [3. Component parts](#3-component-parts)
   - [3.1. Current to Voltage (I/V) resistors](#31-current-to-volatge-iv-resistors)
   - [3.2. Integrated Interchip Sound (I2S) resistors](#32-integrated-interchip-sound-i2s-resistors)
@@ -26,6 +26,8 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [5.2. CamillaDSP](#52-camilladsp)
   - [5.3. MPD and SoX](#53-mpd-and-sox)
 - [6. Appendix)
+  - [6.1. PCB reference designators](#61-pcb-reference-designators)
+  - [6.2. Acronyms](#61-acronyms)
 
 # 1. Introduction
 
@@ -33,7 +35,7 @@ The ProtoDAC TDA1387 X8 is a DIY DAC based on the vintage Philips TDA1387 multib
 
 ![](images/protodac_x8_module.jpg)
 
-The module is designed as a direct plug in replacement for the famous TDA1541, which is now difficult to obtain. The TDA1541 was a flagship Philips multibit 16 bit DAC in a 28 pin DIP/DIL, and is older and more complex. The TDA1387 is a later development multibit DAC with current output, and simplified having only 8 pins.
+The module is designed as a direct plug in replacement for the famous TDA1541, which is now difficult to obtain. The TDA1541 was a flagship Philips multibit 16 bit DAC in a 28 pin Dual In-line Package (DIP), and is older and more complex. The TDA1387 is a later development multibit DAC with current output, and simplified having only 8 pins.
 
 The TDA1387 is a very interesting 16-bit design and represents the end of the multibit DAC era. It uses continuous calibration of the five most significant bit current sources, so it has 32 current sources and one spare source. Philips multibit DACs are also unique in that they do not use resistors like some other DACs, but instead use active devices to generate the currents.
 
@@ -43,7 +45,7 @@ Most importantly, the sound quality of the finished DAC is excellent, especially
 
 # 2. Printed Circuit Board (PCB)
 
-The PCB dimensions and layout conform to the Raspberry Pi "Hardware Attached on Top" (HAT) requirements including the standard 40-pin GPIO header. All components are attached using through-hole soldering.
+The PCB dimensions and layout conform to the Raspberry Pi "Hardware Attached on Top" (HAT) requirements including the standard 40-pin General Purpose Input Output (GPIO) header. All components are attached using through-hole soldering.
 
 ## 2.1 PCB Layout
 
@@ -51,40 +53,40 @@ The Computer Aided Design (CAD) drawing of the PCB shows the board layout and lo
 
 ![](images/protodac_pcb_rev2a_500.jpg)
 
-|Identifier|Component|
-|:-|:-|
-|U1|2X20P Female Header 40 Position Header Connector 0.100" (2.54mm) Through Hole Gold  DigiKey S7123-ND or eBay/AliExpress|
-|U2|TDA1387 x 8 Parallel Module Replacement Substitution for TDA1541. Available on eBay/AliExpress search "tda1387 tda1541" or "hifi 8pcs tda1387"|
-|U3,U4|Audio grade bulk metal foil resistor, through hole 420R Texas Components TX2352 or TX2575 https://www.texascomponents.com/store/home.asp or Charcroft in EU|
-|c2|RCA Jacks. CA right angle PCB mount RJ-255A. Available on eBay/AliExpress search "RCA PCB DAC"|
-|C3,C4|Audio grade electrolytic capacitors 1000uF 6.3V Nichicon UKA, Panasonic FR-A 10mm diameter and 5mm lead spacing.|
-|C6|Output capacitor options: 4.7-10uF polypropylene film capacitor. Radial leads with 37.5mm LS, and axial leads with 49mm LS using RCA jacks, and up to 54mm LS without output RCA jacks.|
-|R1-R3|430R or 470R 1/4W generic metal film resistors Stackpole RNMF14FTC430R/RNMF14FTC470R or similar.|
+|Reference designator|Component|Description|
+|:-|:-|:-|
+|C3,C4|Electrolytic capacitors|Audio grade 1000uF 6.3V Nichicon UKA or Panasonic FR-A 10mm diameter and 5mm lead spacing.|
+|C5-C6|Output capacitors|4.7-10uF polypropylene film capacitor. Radial leads with 37.5mm LS, and axial leads with 49mm LS using RCA jacks, and up to 54mm LS without RCA jacks.|
+|R1-R3|Film Resistors|430R or 470R 1/4W generic metal film resistors Stackpole RNMF14FTC430R/RNMF14FTC470R or similar.|
+|U3,U4 ?? (R4-R5)|Foil Resistors|Audio grade Bulk Metal Foil resistors, through hole 420R. Texas Components TX2352 or TX2575 (Vishay) https://www.texascomponents.com/store/home.asp or Charcroft in EU|
+|U1 ?? (H1)|GPIO Header|2X20P Female 40 position header connector 0.100" (2.54mm) through hole gold. DigiKey S7123-ND or eBay/AliExpress|
+|U2|TDA1387 Module|TDA1387 x 8 Parallel Module Substitution for TDA1541. Available on eBay/AliExpress search "tda1387 tda1541" or "hifi 8pcs tda1387"|
+|L/R|RCA Jacks|CA right angle PCB mount RJ-255A. Available on eBay/AliExpress search "RCA PCB DAC"|
 
 ## 2.2 Schematic
 
-Paragraph goes here
+Below is a block diagram of the circuit.
 
 ![](images/protodac_schematic_v2.jpg)
 
-## 2.3 Pin assignments
+## 2.3 Pin mappings
 
-Paragraph goes here
+Below are the pin mappings for the GPIO header and TDA1387 X8 Module.
 
 ### I2S Inputs
 
-|X8 Module pin|I2S|GPIO number|Broadcom pin|
+|X8 Module pin|I2S function|GPIO number|Broadcom pin|
 |:-|:-|:-|:-|
-|1|WS(LRCK)|19|35|
-|2|__BCK__|18|12|
+|1|WS (LRCK)|19|35|
+|2|BCK|18|12|
 |3|DATA|21|40|
-|4|__BCK__|18|12|
+|4|BCK|18|12|
 
 ![](images/protodac_gpio_header_500.jpg)
 
 ### TDA1387 X8 Module
 
-The module is implemented as a 28 pin DIP/DIL package. The module is only connected by pins 1,2,3,4,5,6,25 and 28. Note that pins 2 and 4 are internally connected.
+The module is implemented as a 28 pin DIP. The module is only connected by pins 1-6, 25 and 28. Note that pins 2 and 4 are internally connected.
 
 <table><tr><td style="border:none;">
 
@@ -167,3 +169,34 @@ Boutique film capacitors can be very expensive and are often too large for the a
 # 5. moOde configuration
 
 # 6. Appendix
+
+## 6.1 PCB reference designators
+
+|Designator|Description|
+|:-|:-|
+|C|Capacitors|
+|J|Connectors|
+|R|Resistors|
+|U|Integrated circuits|
+
+## 6.2 Acronums
+
+|Acronym|Description|
+|:-|:-|
+|BCK|Bit Clock|
+|CAD|Computer Aided Design|
+|DAC|Digital to Audio Converter|
+|DOUT|Data Output|
+|GND|Ground|
+|GPIO|General Purpose Input Output|
+|HAT|Hardware Attached on Top|
+|IC|Integrated Circuit|
+|I2S|Integrated Interchip Sound|
+|I/V|Current to Voltage|
+|kHz|Kilohertz|
+|NOS|Non-Oversampling|
+|PCB|Printed Circuit Board|
+|uF|Microfarad|
+|Vcc|Supply Voltage|
+|VDC|Volts Direct Current|
+|WS (LRCK)|Word Select (Left/Right Clock)|
