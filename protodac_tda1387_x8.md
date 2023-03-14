@@ -45,7 +45,7 @@ The ProtoDAC is one of the easiest NOS DAC's to build. The number of components 
 
 Most importantly, the sound quality of the finished DAC is excellent, especially when using premium components.
 
-[Back to Top](#protodac-tda1387-x8--)
+[Back to Top](#protodac-tda1387-x8-)
 
 # 2. Printed Circuit Board (PCB)
 
@@ -116,7 +116,7 @@ The module is implemented as a 28 pin DIP. The module is only connected by pins 
 
 ![](images/protodac_module_dip_dil_v4.jpg)
 
-[Back to Top](#protodac-tda1387-x8--)
+[Back to Top](#protodac-tda1387-x8-)
 
 # 3. Component parts
 
@@ -170,15 +170,15 @@ A basic polypropylene metallized film capacitor is a WIMA MKP4 or MKP10 with rad
 
 Boutique film capacitors can be very expensive and are often too large for the available space on the HAT. Metallized polypropylene tend to be the best value.
 
-[Back to Top](#protodac-tda1387-x8--)
+[Back to Top](#protodac-tda1387-x8-)
 
 # 4. Assembly and Testing
 
-[Back to Top](#protodac-tda1387-x8--)
+[Back to Top](#protodac-tda1387-x8-)
 
 # 5. moOde configuration
 
-[Back to Top](#protodac-tda1387-x8--)
+[Back to Top](#protodac-tda1387-x8-)
 
 # 6. Appendix
 
