@@ -45,7 +45,7 @@ The ProtoDAC is one of the easiest NOS DAC's to build. The number of components 
 
 Most importantly, the sound quality of the finished DAC is excellent, especially when using premium components.
 
-[Back to Top](#table-of-contents)
+[Back to Top](#table-of-contents-)
 
 # 2. Printed Circuit Board (PCB)
 
