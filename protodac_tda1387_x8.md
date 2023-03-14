@@ -16,7 +16,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [2.2. Schematic](#22-schematic)
   - [2.3. Pin mappings](#23-pin-mappings)
 - [3. Component parts](#3-component-parts)
-  - [3.1. TDA1387 x 8 Module](#31-tda1387-x8-module)
+  - [3.1. TDA1387 x 8 Module](#31-tda1387-x-8-module)
   - [3.2. Current to Voltage (I/V) resistors](#32-current-to-volatge-iv-resistors)
   - [3.3. Integrated Interchip Sound (I2S) resistors](#33-integrated-interchip-sound-i2s-resistors)
   - [3.4. Electrolytic decoupling capacitors](#34-electrolytic-decoupling-capacitors)
