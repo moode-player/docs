@@ -17,7 +17,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [2.3. Pin mappings](#23-pin-mappings)
 - [3. Component parts](#3-component-parts)
   - [3.1. TDA1387 x 8 Module](#31-tda1387-x-8-module)
-  - [3.2. Current to Voltage (I/V) resistors](#32-current-to-voltage-iv-resistors)  
+  - [3.2. Current to Voltage (I/V) resistors](#32-current-to-voltage-iv-resistors)
   - [3.3. Integrated Interchip Sound (I2S) resistors](#33-integrated-interchip-sound-i2s-resistors)
   - [3.4. Electrolytic decoupling capacitors](#34-electrolytic-decoupling-capacitors)
   - [3.5. Output coupling capacitors](#35-output-coupling-capacitors)
@@ -155,9 +155,9 @@ TeraDak TDA1387 x8 uses 390R I/V with 8000uF, which has a screen-like image (no 
 
 The source of Vishay S and Z-foil resistors in the US is Texas Components, and in Europe it is Charcroft . TX2575 are about $13 each without shipping. The TX2352 or S-foil is the "original" foil naked audio resistor, and are about $9 each. The Vishay S and Z foil resistors are vastly better performing in this DAC than other types.
 
-## 3.3 I2S resistors
+## 3.3 Integrated Interchip Sound (I2S) resistors
 
-430R or 470R generic 1/8 or 1/4W metal film. The purpose is to limit high frequency noise on the I2S lines. I have used unshielded 10cm jumpers to an outboard proto board without a problem. Mount close to the module.
+Use 430R or 470R generic 1/8 or 1/4W metal film. The purpose is to limit high frequency noise on the I2S lines. I have used unshielded 10cm jumpers to an outboard proto board without a problem. Mount close to the module.
 
 ## 3.4 Electrolytic decoupling capacitors
 
