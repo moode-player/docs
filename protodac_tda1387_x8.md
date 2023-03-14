@@ -16,10 +16,11 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
   - [2.2. Schematic](#22-schematic)
   - [2.3. Pin mappings](#23-pin-mappings)
 - [3. Component parts](#3-component-parts)
-  - [3.1. Current to Voltage (I/V) resistors](#31-current-to-volatge-iv-resistors)
-  - [3.2. Integrated Interchip Sound (I2S) resistors](#32-integrated-interchip-sound-i2s-resistors)
-  - [3.3. Electrolytic decoupling capacitors](#33-electrolytic-decoupling-capacitors)
-  - [3.4. Output coupling capacitors](#34-output-coupling-capacitors)
+  - [3.1. TDA1387 x 8 Module](#31-tda1387-x8-module)
+  - [3.2. Current to Voltage (I/V) resistors](#32-current-to-volatge-iv-resistors)
+  - [3.3. Integrated Interchip Sound (I2S) resistors](#33-integrated-interchip-sound-i2s-resistors)
+  - [3.4. Electrolytic decoupling capacitors](#34-electrolytic-decoupling-capacitors)
+  - [3.5. Output coupling capacitors](#35-output-coupling-capacitors)
 - [4. Assembly and testing](#4-assembly-and-testing)
   - [4.1. Assembly](#41-assembly)
   - [4.2. Testing](#42-testing)
@@ -90,7 +91,7 @@ Below are the pin mappings for the GPIO header and TDA1387 X8 Module.
 
 ### TDA1387 X8 Module
 
-The module is implemented as a 28 pin DIP. The module is only connected by pins 1-6, 25 and 28. Note that pins 2 and 4 are internally connected.
+The module is implemented as a 28 pin DIP and is only connected by pins 1-6, 25 and 28. Note that pins 2 and 4 are internally connected.
 
 <table><tr><td style="border:none;">
 
@@ -120,9 +121,15 @@ The module is implemented as a 28 pin DIP. The module is only connected by pins 
 
 # 3. Component parts
 
-Component parts for the DAC are readily available from various suppliers but since the Philips TDA1387 chips are not produced anymore the 8 x parallel chip module long term availability cannot be guaranteed.
+Component parts for the DAC are readily available from various suppliers but since the Philips TDA1387 chips are not produced anymore the 8 x Parallel Chip Module long term availability cannot be guaranteed.
 
-## 3.1 Current to Voltage (I/V) resistors
+## 3.1 TDA1387 x 8 Module
+
+The TDA1387 Integrated Circuit (IC) chips on the module are configured in parallel with decoupling capacitors and pin 7 capacitors.
+
+The chips are used and originate from the overseas chip-pull industry. Generally they are of high quality but since they are used there is a greater probability of receiving a defective part compared to new parts.
+
+## 3.2 Current to Voltage (I/V) resistors
 
 ### Resistor type
 
@@ -148,17 +155,17 @@ TeraDak TDA1387 x8 uses 390R I/V with 8000uF, which has a screen-like image (no 
 
 The source of Vishay S and Z-foil resistors in the US is Texas Components, and in Europe it is Charcroft . TX2575 are about $13 each without shipping. The TX2352 or S-foil is the "original" foil naked audio resistor, and are about $9 each. The Vishay S and Z foil resistors are vastly better performing in this DAC than other types.
 
-## 3.2 I2S resistors
+## 3.3 I2S resistors
 
 430R or 470R generic 1/8 or 1/4W metal film. The purpose is to limit high frequency noise on the I2S lines. I have used unshielded 10cm jumpers to an outboard proto board without a problem. Mount close to the module.
 
-## 3.3 Electrolytic decoupling capacitors
+## 3.4 Electrolytic decoupling capacitors
 
 The choice of Vcc electrolytic decoupling capacitor depends on the value of the I/V resistor in an inverse relationship. As the I/V resistor decreases, the capacitor needs to increase. If the capacitor is too low in value for the I/V resistor, the sound with be anemic, with weak bass and dynamics, but more 3D with deep soundstage. If the capacitor value is too high for the I/V resistor, the depth of soundstage will decrease.
 
 For a 430R I/V resistor, 1800-2200uF is about right. You can use capacitors in parallel for better sound quality. Additional caps can be added in the open area below the module and between the output coupling caps. Connect positive to the 5V strip and negative to the 3V3 side GND strip with jumper wires. Listen to various values by press fitting before soldering.
 
-## 3.4 Output coupling capacitors
+## 3.5 Output coupling capacitors
 
 These capacitors can vary considerably in size, quality and price. You may want to press fit these in place to try different types before soldering.
 
