@@ -6,7 +6,7 @@ By: @hifinet (c) 2023
 Edited by @Tim Curtis  
 Updated: 2023-03-14
 
-This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital to Analog Converter (DAC) including technology, sources for the components and instructions for building the DAC.
+This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital to Analog Converter (DAC) including technology, component sources and instructions for building the DAC.
 
 ### Table of Contents <!-- omit in toc -->
 
@@ -34,7 +34,7 @@ This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital t
 
 # 1. Introduction
 
-The ProtoDAC TDA1387 X8 is a DIY DAC based on the vintage Philips TDA1387 multibit DAC chip in an eight chip module as pictured below. The chips are configured in parallel with decoupling capacitors and pin 7 capacitors.
+The ProtoDAC TDA1387 X8 is a DIY DAC based on the vintage Philips TDA1387 multibit DAC chip in an eight chip module as pictured below. The chips are configured in parallel with decoupling capacitors and pin 7 capacitors on the underside of the module.
 
 ![](images/protodac_x8_module.jpg)
 
@@ -54,7 +54,7 @@ The PCB dimensions and layout conform to the Raspberry Pi "Hardware Attached on 
 
 ## 2.1 PCB Layout
 
-The Computer Aided Design (CAD) drawing of the PCB shows the board layout and location of the component parts. The design allows for several variations including axial or radial output I/V capacitors and RCA jacks or direct wiring to L/R channels.
+The Computer Aided Design (CAD) drawing of the PCB shows the board layout and location of the component parts. The design allows for several component variations including axial or radial output I/V capacitors, RCA jacks or direct wiring to PCB L/R channel out and 5V power from GPIO or via direct wiring to PCB.
 
 ![](images/protodac_pcb_rev2a_500.jpg)
 
@@ -78,7 +78,7 @@ Below is a block diagram of the circuit.
 
 Below are the pin mappings for the GPIO header and TDA1387 X8 Module.
 
-### I2S Inputs
+### I2S Input/Output
 
 |X8 Module pin|I2S function|GPIO number|Broadcom pin|
 |:-|:-|:-|:-|
@@ -91,7 +91,7 @@ Below are the pin mappings for the GPIO header and TDA1387 X8 Module.
 
 ### TDA1387 X8 Module
 
-The module is implemented as a 28 pin DIP and is only connected by pins 1-6, 25 and 28. Note that pins 2 and 4 are internally connected.
+The module is implemented as a 28 pin DIP and is connected only by pins 1-6, 25 and 28. Note that pins 2 and 4 are internally connected.
 
 <table><tr><td style="border:none;">
 
@@ -125,9 +125,13 @@ Component parts for the DAC are readily available from various suppliers but sin
 
 ## 3.1 TDA1387 x 8 Module
 
-The TDA1387 Integrated Circuit (IC) chips on the module are configured in parallel with decoupling capacitors and pin 7 capacitors.
+The TDA1387 Integrated Circuit (IC) chips on the module are configured in parallel with decoupling capacitors and pin 7 capacitors on the underside of the board.
 
 The chips are used and originate from the overseas chip-pull industry. Generally they are of high quality but since they are used there is a greater probability of receiving a defective part compared to new parts.
+
+The image below shows an example chip from each of two modules. Note the orientation of the name "Thailand".
+
+![](images/protodac_tda1387_used_chips.jpg)
 
 ## 3.2 Current to Voltage (I/V) resistors
 
