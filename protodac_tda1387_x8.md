@@ -189,6 +189,8 @@ Boutique film capacitors can be very expensive and are often too large for the a
 
 # 5. moOde configuration
 
+
+
 [Back to Top](#protodac-tda1387-x8-)
 
 # 6. Appendix
@@ -198,6 +200,7 @@ Boutique film capacitors can be very expensive and are often too large for the a
 |Designator|Description|
 |:-|:-|
 |C|Capacitor|
+|H|Capacitor|
 |J|Connector|
 |R|Resistor|
 |U|Integrated Circuit (IC)|
