@@ -4,7 +4,7 @@ ProtoDAC TDA1387 X8 <!-- omit in toc -->
 ===============================================
 By: @hifinet (c) 2023  
 Edited by @Tim Curtis  
-Updated: 2023-03-14
+DRAFT Updated: 2023-03-17
 
 This document describes the ProtoDAC TDA1387 X8 Non-Oversampling (NOS) Digital to Analog Converter (DAC) including technology, component sources and instructions for building the DAC.
 
