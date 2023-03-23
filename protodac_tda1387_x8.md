@@ -54,6 +54,8 @@ The PCB dimensions and layout conform to the Raspberry Pi "Hardware Attached on 
 
 ## 2.1 PCB Layout
 
+NOTE: This is not final PCB revision
+
 The Computer Aided Design (CAD) drawing of the PCB shows the board layout and location of the component parts. The design allows for several component variations including axial or radial output I/V capacitors, RCA jacks or direct wiring to PCB L/R channel out and 5V power from GPIO or via direct wiring to PCB.
 
 ![](images/protodac_pcb_rev2a_500.jpg)
@@ -135,19 +137,21 @@ The image below shows an example chip from each of two modules. Note the orienta
 
 ## 3.2 Current to Voltage (I/V) resistors
 
+I worked with diyAudio user @stellarelephant, and we listened to many types of I/V resistors. We concluded that Metal foil are superior by a wide margin.
+
 ### Resistor type
 
-Vishay naked bulk metal foil are unsurpassed, and sound very transparent with excellent detail. This may be due to the very low noise or noninductive design. The improvement in detail compared to other resistor types is dramatic.
+Vishay naked bulk metal foil are unsurpassed, and sound very transparent with excellent detail. This may be due to the very low noise or non-inductive design. The improvement in detail compared to other resistor types is dramatic.
 
 Bulk metal foil can be ordered to spec, but they are expensive. Metal film sound OK, and have the advantage in that they are abundant and cheap. I would recommend starting with metal film to hear the possibilities of the DAC, and then move up to Vishay metal foil resistors (if not Z-foil, then S-foil) if you think the DAC shows promise.
 
 ### Resistor value
 
- This is critical. The I/V resistor should be no larger than 430R for Vcc of 5 VDC. I measured THD with 0 dB 1kHz sine wave input to the DAC with various I/V resistances. See the chart below. Distortion at 223.5R is measured at 0.0080% and at 322R it is 0.0097%, and THD increases linearly with resistance up to just past 430R. Then distortion starts to increase exponentially, indicating clipping.
+The resistor value is critical to avoid clipping at 0dB. The I/V resistor should be no larger than 430R for Vcc of 5 VDC. I measured THD with 0 dB 1kHz sine wave input to the DAC with various I/V resistances. See the chart below. Distortion at 223.5R is measured at 0.0080% and at 322R it is 0.0097%, and THD increases linearly with resistance up to just past 430R. Then distortion starts to increase exponentially, indicating clipping.
 
 ![](images/protodac_thd_distortion_600_v3.jpg)
 
-Excessive distortion is created when the DAC is clipping. Fortunately, the TDA1387 has a high voltage compliance of 3.5V at 5V Vcc. Clipping occurs if the AC signal exceeds +3.5V or 0V. The final calculation depends on the I/V resistance and the module with its particular characteristics (DC current at idle, and the peak to peak current at full signal).  The I/V resistor should be no larger than 430R for Vcc of 5 VDC.
+Excessive distortion is created when the DAC is clipping. Fortunately, the TDA1387 has a high voltage compliance of 3.5V at 5V Vcc. Clipping occurs if the AC signal exceeds +3.5V or 0V. The final calculation depends on the I/V resistance and the module with its particular characteristics (DC current at idle, and the peak to peak current at full signal). The I/V resistor should be no larger than 430R for Vcc of 5 VDC.
 
 Since there are variations in the modules, it would be prudent to measure the distortion with various resistances in the target range with your module, before buying expensive I/V resistors. This would be especially the case if you are trying to push the 430R limit or the Vcc maximum of the TDA1387. You can measure distortion with a computer, USB audio interface and REW. The most reliable method would be to use cheap metal films in 430R value, and check distortion with the variations in resistance values, based on accurate resistance measurements with a DMM. Another factor will be supply voltage, which can change full scale output current. So use the same supply voltage with the expensive I/V resistors.
 
