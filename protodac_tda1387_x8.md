@@ -63,7 +63,7 @@ The Computer Aided Design (CAD) drawing of the PCB shows the board layout and lo
 |Reference designator|Component|Description|
 |:-|:-|:-|
 |C1,C2 or<br>C5,C6|Output capacitors|Polypropylene Film 4.7-10uF. Radial leads with 37.5mm LS and Axial leads with 49mm LS using RCA jacks, and up to 54mm LS without RCA jacks.|
-|C3,C4|Electrolytic capacitors|Audio grade 1000uF 6.3V Nichicon UKA or Panasonic FR-A 10mm diameter and 5mm lead spacing.|
+|C3,C4|Electrolytic capacitors|Audio grade 1000uF 6.3V, 10mm diameter and 5mm lead spacing. Nichicon FG (Fine Gold) or KA paired with a Panasonic FR-A adds clarity, with a wide open range and more air up top. Better than two Nichicons in testing.|
 |H1|GPIO Header|Female 2X20P 40 position header connector 0.100" (2.54mm) through hole gold. DigiKey S7123-ND or eBay/AliExpress|
 |R1-R3|Film Resistors|Generic metal film 430R or 470R 1/4W  Stackpole RNMF14FTC430R/RNMF14FTC470R or similar.|
 |R4-R5|Foil Resistors|Audio grade Bulk Metal Foil, through hole 420R. Texas Components TX2352 or TX2575 (Vishay) https://www.texascomponents.com/store/home.asp or Charcroft in EU|
