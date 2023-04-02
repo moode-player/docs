@@ -135,8 +135,8 @@ If the package is deployed to Cloudsmith you can installed as below:
 
 ```bash
 curl -1sLf \
-'https://dl.cloudsmith.io/public/moodeaudio/m8x/setup.deb.sh' \
-| sudo -E bash
+'https://dl.cloudsmith.io/public/moodeaudio/m8y/setup.deb.sh' \
+| sudo -E distro=raspbian codename=bullseye bash
 
 sudo apt update
 sudo apt upgrade

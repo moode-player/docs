@@ -261,8 +261,8 @@ Installing the repository will make it available with commone apt tools.
 
 ```bash
 curl -1sLf \
-  'https://dl.cloudsmith.io/public/moodeaudio/m8x/setup.deb.sh' \
-  | sudo -E bash
+'https://dl.cloudsmith.io/public/moodeaudio/m8y/setup.deb.sh' \
+| sudo -E distro=raspbian codename=bullseye bash
 ```
 Before use make sure you have update the available package information:
 ```bash
