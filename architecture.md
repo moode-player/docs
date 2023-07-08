@@ -32,6 +32,7 @@ summarized in the Overview section of the [Master Development Guide](). It's bas
 
 There are no details in the document describing how all the parts of application are stitched together due to lack of time to write that section. Similarly the Source Tree documentation which would be related to that section is incomplete and outdated. Volunteers are welcome :-)
 
+[Moode Source Tree](https://github.com/moode-player/docs/blob/main/moode_source_tree.md) contains a description of what each part of the source tree contains.
 
 # 2. Backends
 
