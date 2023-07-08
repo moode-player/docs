@@ -29,7 +29,12 @@ To start developing for moOde it's necessary to first become familiar with the s
 |pkgbuild|Scripts to build third-party packages for moOde|
 |pkgsource|Sources for third-party packages used by moOde|
 
-# 3. Reference materials
+# 3. Architecture overview
+
+The software architecture, as well as the relation to source code is documented in our
+[Architecture document]((https://github.com/moode-player/docs/blob/main/architecture.md))
+
+# 4. Reference materials
 
 The following reference materials provide details on the structure of moOde and on how to use the Build Tooling to generate the front-end and back-end, configure and build packages and build the ISO image.
 
