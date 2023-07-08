@@ -9,27 +9,70 @@ some guidance into how to extend/change the code.
 
 - [1. Overview](#1-overview)
 - [2. Backends](#2-backends)
-- [2.1 Main backend](#2.1-mainbackend)
-
-
-- [2. The repositories](#2-the-repositories)
-- [3. Reference materials](#3-reference-materials)
-
-
-
-
-
-
-
-
+  - [2.1 Main backend](#21-main-backend)
+    - [2.1.1 Interface MPD](#211-interface-mpd)
+  - [2.2 Multiroom backend](#22-multiroom-backend)
+    - [2.2.1 Interface Multiroom clients](#221-interface-multiroom-clients)
+    - [2.2.2 Interface client to backend](#222-interface-client-to-backend)
+  - [2.3 Playback modes](#23-playback-modes)
+  - [2.4 Interface web client](#24-interface-web-client)
+- [3. Web client](#1-web-client)
+  - [3.1 Interface to backend](#31-interface-to-backend)
+  - [3.2 Page layout](#32-page-layout)
+- [4. General comments](#4-general-comments)
 
 # 1. Overview
 
+TBD.
+
 # 2. Backends
+
+TBD.
 
 ## 2.1 Main backend
 
+TBD.
+
+### 2.1.1 Interface MPD
+
+TBD.
+
 ## 2.2 Multiroom backend
+
+TBD.
+
+### 2.2.1 Interface Multiroom clients
+
+TBD.
+
+### 2.2.2 Interface client to backend
+
+TBD.
+
+### 2.3 Playback modes
+
+TBD.
+
+### 2.4 Interface web client
+
+TBD.
+
+# 3. Web client
+
+TBD.
+
+## 3.1 Interface to backend
+
+TBD.
+
+# 3.2 Page layout
+
+# 4. General comments
+
+
+
+
+
 
 
 
