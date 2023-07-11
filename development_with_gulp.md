@@ -3,7 +3,7 @@ Development with Gulp <!-- omit in toc -->
 By: @bitlab (c) 2021
 Updated: 2022-03-10
 
-This developer guide explains how to use the `Gulp toolkit` to automate building the moOde front-end.
+This document explains how to use the `Gulp toolkit` to automate building the moOde front-end.
 
 ### Table of Contents <!-- omit in toc -->
 

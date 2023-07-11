@@ -3,7 +3,7 @@ Build the moode-player package <!-- omit in toc -->
 By: @bitlab (c) 2021
 Updated: 2022-03-10
 
-This developer guide explains how to build the `moOde-player` package from sources.
+This document explains how to build the `moOde-player` package from sources.
 
 ### Table of Contents <!-- omit in toc -->
 

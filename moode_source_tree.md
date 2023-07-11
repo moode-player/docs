@@ -3,8 +3,7 @@ Moode Source Tree <!-- omit in toc -->
 By: Tim Curtis (c) 2022
 Updated: 2022-06-12
 
-This developer guide describes the function of directories and files in the moode Git repository.
-
+This document describes the function of directories and files in the moode Git repository.
 
 |File|Description|
 | :- | :- |

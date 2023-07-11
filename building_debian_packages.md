@@ -3,7 +3,7 @@ Building Debian packages <!-- omit in toc -->
 By: @bitlab (c) 2021
 Updated: 2022-03-10
 
-This developer guide describes how `Debian` packages are used in moOde.
+This document describes how `Debian` packages are used in moOde.
 
 ### Table of Contents <!-- omit in toc -->
 
