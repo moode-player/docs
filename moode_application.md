@@ -3,7 +3,7 @@ Moode Application <!-- omit in toc -->
 By: Tim Curtis (c) 2023
 Updated: 2023-07-11
 
-This document describes the architecture of moOde audio player and how the component parts are related to one another.
+This document describes the architecture of the moOde audio player application and how component parts are related to one another.
 
 - [1. Overview](#1-overview)
 - [2. Web page structure](#2-web-page-structure)
