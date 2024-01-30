@@ -3,7 +3,7 @@ Developer documentation
 
 ### Disclaimer ###
 
-The software contained in this repository is distributed under the [GNU GENERAL PUBLIC LICENSE Version 3](https://raw.githubusercontent.com/moode-player/docs/main/LICENSE) which includes the following disclaimer:
+The software and other materials in this repository are distributed under the [GNU GENERAL PUBLIC LICENSE Version 3](https://raw.githubusercontent.com/moode-player/docs/main/LICENSE) which includes the following disclaimer:
 
 >15. Disclaimer of Warranty.
 >
