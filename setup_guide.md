@@ -2,8 +2,9 @@
 
 Setup Guide <!-- omit in toc -->
 ===============================================
-<span style="float:right;margin-right:1em;margin-top:-5em"><img src="images/moode-r900-logotype-clear-black-cropped.png"
-width="200px"></span>
+<span style=""><img src="images/moode-r900-logotype-clear-black-cropped.png"
+width="300px"></span>
+
 (C) Tim Curtis 2017  
 (C) @azimuth 2024 Pi Imager tutorial
 
