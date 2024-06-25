@@ -2,72 +2,54 @@
 
 Setup Guide <!-- omit in toc -->
 ===============================================
-<span style="float:right;margin-right:1em;margin-top:-5em"><img src="images/moode-r900-logotype-clear-black-cropped.png"
+<span style="float:right;margin-right:1em;margin-top:-5em"><img src="../images/moode-r900-logotype-clear-black-cropped.png"
 width="200px"></span>
 (C) Tim Curtis 2017  
-(C) @azimuth 2024: Novice Section
+(C) @azimuth 2024 Pi Imager section
 
 ### Table of Contents <!-- omit in toc -->
 
-- [1. General Information](#1-general-information)
-- [2. Quick Help](#2-quick-help)
+- [1. Introduction](#1-introduction)
+- [2. Creating the Boot SD Card](#2-creating-the-boot-sd-card)
+- [3. After Startup](#3-after-startup)
+  - [3.1. Audio Device](#31-audio-device)
+  - [3.2. Music Files](#32-music-files)
+  - [3.3. Networking](#33-networking)
+  - [3.4. File Sharing](#34-file-sharing)
+  - [3.5. Software Updates](#35-software-updates)
+- [4. Imager Tutorial](#4-imager-tutorial)
+- [5. Advanced](#5-advanced)
+  - [5.1. REST API](#51-rest-api)
+  - [5.2. SSH Commands](#52-ssh-commands)
 
-# 1. General Information
+# 1. Introduction
 
-Access the moOde WebUI using a Browser and one of the URL's below. After the WebUI appears in the Browser use the IOS or Android "Save to Home Screen" option to create a moOde App on the home screen. There is no need to download a separate App.
-http://moode | http://moode.local | http://IP_ADDRESS
+Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter http:// moode, moode.local or ip_address in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS or Android to create a Moode App.
 
-# 2. Quick Help
+[Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf)  contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the "m" menu in the player.
 
-Instructions for navigating the moOde WebUI, searching the Library, Preference
-and Configuration settings, Multiroom audio and other important information is
-in "Quick help" which which is located on the "m" menu and at the link below.
-https://github.com/moode-player/docs/blob/main/Quickhelp.pdf
+# 2. Creating the boot SD Card
 
-# 3. Novice Setup Instructions
+Before you can access Moode a pre-built image must be written to a micro SD Card using the official Raspberry Pi Imager. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the Media Player OS section of the Imager. Refer to this [Tutorial](#N-imager-tutorial) for step by step instructions.
 
-These instructions provide a basic step by step tutorial showing how to use the
-Raspberry Pi Imager to prepare and write the moOde OS image to an SD card.
-<link or in-doc refereence>
+Note: For improved security pre-built images do not contain a default logon userid, WiFi SSID or Hotspot password and Secure Shell (SSH) access is disabled by default. These are setup using the Imager.
 
-# 4. Operating System (OS) Image
+# 3. After Startup
 
-For improved security the OS image does not contain a userid, WiFi SSID or
-Hotspot password, and Secure Shell (SSH) access is disabled.
+After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to the Library and make use of several  features that enhance the usability and function of Moode.
 
-1. REQUIRED: The official Raspberry Pi Imager is required to enable SSH,
-create a userid and password and optionally set the host name and WiFi SSID
-and password. If a host name is not set in the Imager then the default
-host name "moode" will be used.
+## 3.1. Audio Device
 
-2. REQUIRED: Userid, password and SSH are required otherwise moOde will not
-function correctly. When enabling SSH, select "Use password authentication"
-which means the password specified for the userid is to be used.
+## 3.2. Music Files
 
-3. REQUIRED: A Hotspot password is required and can be set after first boot
-in the Network Configuration screen. This allows moOde to still be accessable
-if it cannot connect to Ethernet or any configured WiFi SSID's.
+## 3.3. Networking
 
-- OS images are listed in the "Media Player OS" category of the Raspberry Pi
-Imager, or if they were downloaded directly from moodeaudio.org they can be
-selected via the "Use custom" category in the Imager.
-
-- Refer to the links below for more information on operating system security
-and how to download and use the Raspberry Pi Imager.
-https://www.raspberrypi.com/software/
-https://www.raspberrypi.com/news/raspberry-pi-bullseye-update-april-2022/
-
-To access the OS command console use SSH. An easy to use WebSSH terminal is
-available in the System Config screen.
-
-# 5. Wifi Hotspot
-
-To access the Hotspot which is moOde's private 2.4 GHz WiFi network refer to the
+Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. Refer to the
 default settings below.
 
 - SSID          Moode
 - Password      As set in Network Config screen
-- URL           http://moode.local | http://172.24.1.1
+- URL           http:// moode.local or 172.24.1.1
 
 The Hotspot starts automatically when any of the following are true.
 
@@ -75,102 +57,29 @@ The Hotspot starts automatically when any of the following are true.
 - WiFi SSID is defined in Network Config but no IP address was assigned after
 attempting to connect to the configured SSID or any saved SSID's.
 
-# 6. File Sharing
+## 3.4. File Sharing
 
-- SMB File Sharing can be turned on in System Config. SMB (Samba) shares named
-NAS, Playlists, and SDCard are automatically created. Each USB disk will also
-have a Samba share created that is named after its Disk Label.
+Moode can be used as a File Server by turning on one or more of the file sharing protocols listed in System Config.
 
-- NFS File Sharing can be turned on in System Config. Access and options defaults
-are provided but can be manually overridden. Each USB disk will have an NFS
-export created whose path is /media/disk_label.
+SMB File Sharing. SMB (Samba) shares named NAS, Playlists, and SDCard are automatically created. Each USB disk will also have a Samba share created that is named after its Disk Label.
 
-# 7. In-Place Software Updates
+NFS File Sharing. Access and options defaults are provided but can be manually overridden. Each USB disk will have an NFS export created whose path is /media/disk_label.
 
-- Updates to moOde software are made available periodically and can be downloaded
+DLNA File Sharing.  
+description goes here.
+
+## 3.5. In-Place Software Updates
+
+Updates to Moode are made available periodically and are downloaded
 and installed by clicking "CHECK for software update" in System Config.
 
-# 8. Player Setup And Configuration
+# 4. Imager Tutorial
 
-1. INITIAL SETUP
+Text and images go here
 
- a) Insert boot SD card
- b) Insert ethernet cable or alternatively use WiFi SSID defined in Pi Imager
- b) Power on
- c) http://moode | http://moode.local | http://IP_ADDRESS
+# 5. Advanced
 
-# 9. Audio Device Setup
-
- - USB DEVICE
- a) Plug in USB audio device
- a) Menu, Configure, Audio
- c) Set Output device to to the name of the USB audio device
-
- - I2S DEVICE
- a) Menu, Configure, Audio
- b) Set Named I2S device or DT overlay to the correct device or overlay name
- c) Menu, Power, Restart
- d) Menu, Configure, Audio
- c) Set Output device to to the name of the I2S audio device
-
-# 10. Add Music Files
-
- - USB STORAGE DEVICES
- a) Insert USB storage device
- b) Menu, Update library
- c) Wait for completion (no spinner)
-
- - BOOT SDCARD STORAGE
- a) Menu, Update library
- b) Wait for completion (no spinner)
-
- - NAS DEVICE
- a) Menu, Configure, Library
- b) CREATE Music source
- c) After SAVE, return to Playback or Library
- d) Menu, Update library
- e) Wait for completion (no spinner)
-
-5. VERIFY AUDIO PLAYBACK
-
- a) http://moode | http://moode.local | http://IP_ADDRESS
- b) Play one of the radio stations
- c) Switch to Library Folder view
- d) Navigate to the SDCARD/Stereo Test
- e) Play the "LR Channel And Phase" track
-
-# 11. Custom Configurations
-
-Customize the player by using any of the following procedures.
-
-1. CONFIGURE FOR WIFI-ONLY CONNECTION
-
- - Ethernet cable connected
- a) Insert WiFi adapter or use Pi Integrated WiFi
- b) http://moode | http://moode.local | http://IP_ADDRESS
- c) Menu, Configure, Network
- d) Configure a WiFi connection
- e) Menu, Power, Shutdown
- f) Unplug Ethernet cable
- g) Power on
-
- - Hotspot mode
- a) Join Hotspot SSID, password = Refer to MOODE OS IMAGE section
- b) http://moode.local | http://172.24.1.1
- c) Menu, Configure, Network
- d) Configure a WiFi connection
- e) Menu, Power, Restart
-
-2. SWITCH FROM WIFI-ONLY BACK TO ETHERNET-ONLY
-
-    a) Plug in Ethernet cable
-    b) Menu, Configure, Network
-    c) RESET network configuration to defaults
-    d) Menu, Power, Shutdown
-    e) Remove WiFi adapter
-    f) Power on
-
-# 12. REST API
+## 5.1. REST API
 
 If an HTTP command returns data it is in JSON format following REST guidelines.
 The base URL is http://moode/command/?cmd=
@@ -212,15 +121,14 @@ See MPD protocol for list of commands.
 https://mpd.readthedocs.io/en/latest/protocol.html
 
 Deprecated REST API (http) commands. The following commands have been replaced
-by the equivalent commands above and at some point will not be supported. It is
-recommened to update scripts to use the new commands.
+by the equivalent new commands above and at some point will not be supported. It is recommened to update your scripts to use the new commands.
 
 - vol.sh
 - coverview.php
 - libupd-submit.php
 - restart-renderer.php
 
-# 12. SSH COMMANDS
+## 5.2. SSH Commands
 
 moodeutl
 This command can be used for printing logs, status or for manipulating certain
@@ -251,3 +159,85 @@ To run it type /var/www/util/restart-renderer.php --renderer
 --squeezelite  Restart Squeezelite
 --plexamp      Restart Plexamp
 --roonbridge   Restart RoonBridge
+
+
+---------------Old stuff---------------
+8. Player Setup And Configuration
+
+1. INITIAL SETUP
+
+ a) Insert boot SD card
+ b) Insert ethernet cable or alternatively use WiFi SSID defined in Pi Imager
+ b) Power on
+ c) http://moode | http://moode.local | http://IP_ADDRESS
+
+9. Audio Device Setup
+
+ - USB DEVICE
+ a) Plug in USB audio device
+ a) Menu, Configure, Audio
+ c) Set Output device to to the name of the USB audio device
+
+ - I2S DEVICE
+ a) Menu, Configure, Audio
+ b) Set Named I2S device or DT overlay to the correct device or overlay name
+ c) Menu, Power, Restart
+ d) Menu, Configure, Audio
+ c) Set Output device to to the name of the I2S audio device
+
+10. Add Music Files
+
+ - USB STORAGE DEVICES
+ a) Insert USB storage device
+ b) Menu, Update library
+ c) Wait for completion (no spinner)
+
+ - BOOT SDCARD STORAGE
+ a) Menu, Update library
+ b) Wait for completion (no spinner)
+
+ - NAS DEVICE
+ a) Menu, Configure, Library
+ b) CREATE Music source
+ c) After SAVE, return to Playback or Library
+ d) Menu, Update library
+ e) Wait for completion (no spinner)
+
+5. VERIFY AUDIO PLAYBACK
+
+ a) http://moode | http://moode.local | http://IP_ADDRESS
+ b) Play one of the radio stations
+ c) Switch to Library Folder view
+ d) Navigate to the SDCARD/Stereo Test
+ e) Play the "LR Channel And Phase" track
+
+11. Custom Configurations
+
+Customize the player by using any of the following procedures.
+
+1. CONFIGURE FOR WIFI-ONLY CONNECTION
+
+ - Ethernet cable connected
+ a) Insert WiFi adapter or use Pi Integrated WiFi
+ b) http://moode | http://moode.local | http://IP_ADDRESS
+ c) Menu, Configure, Network
+ d) Configure a WiFi connection
+ e) Menu, Power, Shutdown
+ f) Unplug Ethernet cable
+ g) Power on
+
+ - Hotspot mode
+ a) Join Hotspot SSID, password = Refer to MOODE OS IMAGE section
+ b) http://moode.local | http://172.24.1.1
+ c) Menu, Configure, Network
+ d) Configure a WiFi connection
+ e) Menu, Power, Restart
+
+2. SWITCH FROM WIFI-ONLY BACK TO ETHERNET-ONLY
+
+    a) Plug in Ethernet cable
+    b) Menu, Configure, Network
+    c) RESET network configuration to defaults
+    d) Menu, Power, Shutdown
+    e) Remove WiFi adapter
+    f) Power on
