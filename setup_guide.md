@@ -5,7 +5,7 @@ Setup Guide <!-- omit in toc -->
 <span style="float:right;margin-right:1em;margin-top:-5em"><img src="../images/moode-r900-logotype-clear-black-cropped.png"
 width="200px"></span>
 (C) Tim Curtis 2017  
-(C) @azimuth 2024 Pi Imager section
+(C) @azimuth 2024 Pi Imager tutorial
 
 ### Table of Contents <!-- omit in toc -->
 
@@ -14,7 +14,7 @@ width="200px"></span>
 - [3. After Startup](#3-after-startup)
   - [3.1. Audio Device](#31-audio-device)
   - [3.2. Music Files](#32-music-files)
-  - [3.3. Networking](#33-networking)
+  - [3.3. Hotspot](#33-hotspot)
   - [3.4. File Sharing](#34-file-sharing)
   - [3.5. Software Updates](#35-software-updates)
 - [4. Imager Tutorial](#4-imager-tutorial)
@@ -30,19 +30,19 @@ Moode audio player is a Free Open Source Software (FOSS) music streamer for the 
 
 # 2. Creating the boot SD Card
 
-Before you can access Moode a pre-built image must be written to a micro SD Card using the official Raspberry Pi Imager. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the Media Player OS section of the Imager. Refer to this [Tutorial](#N-imager-tutorial) for step by step instructions.
+Before you can access Moode a pre-built image must be written to a micro SD Card using the official Raspberry Pi Imager. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the Media Player OS section of the Imager. Refer to the included [Tutorial](#4-imager-tutorial) for step by step instructions.
 
 Note: For improved security pre-built images do not contain a default logon userid, WiFi SSID or Hotspot password and Secure Shell (SSH) access is disabled by default. These are setup using the Imager.
 
 # 3. After Startup
 
-After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to the Library and make use of several  features that enhance the usability and function of Moode.
+After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to the Library and make use of features that enhance the usability and function of Moode.
 
 ## 3.1. Audio Device
 
 ## 3.2. Music Files
 
-## 3.3. Networking
+## 3.3. Hotspot
 
 Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. Refer to the
 default settings below.
@@ -51,7 +51,7 @@ default settings below.
 - Password      As set in Network Config screen
 - URL           http:// moode.local or 172.24.1.1
 
-The Hotspot starts automatically when any of the following are true.
+The Hotspot starts when any of the following are true.
 
 - WiFi SSID is set to "Activate Hotspot" in Network Config.
 - WiFi SSID is defined in Network Config but no IP address was assigned after
@@ -59,23 +59,58 @@ attempting to connect to the configured SSID or any saved SSID's.
 
 ## 3.4. File Sharing
 
-Moode can be used as a File Server by turning on one or more of the file sharing protocols listed in System Config.
+Moode can be used as a File Server by turning on one or more of the file sharing protocols listed below. These protocols and their respective options are in the File Sharing section of System Config.
 
-SMB File Sharing. SMB (Samba) shares named NAS, Playlists, and SDCard are automatically created. Each USB disk will also have a Samba share created that is named after its Disk Label.
+- SMB File Sharing. SMB (Samba) shares named NAS, Playlists, and SDCard are automatically created. Each USB disk will also have a Samba share created that is named after its Disk Label.
 
-NFS File Sharing. Access and options defaults are provided but can be manually overridden. Each USB disk will have an NFS export created whose path is /media/disk_label.
+- NFS File Sharing. Access and options defaults are provided but can be manually overridden. Each USB disk will have an NFS export created whose path is /media/disk_label.
 
-DLNA File Sharing.  
-description goes here.
+- DLNA File Sharing. The DLNA media server indexes music sources defined for MPD and makes them available to UPnP control points.
 
 ## 3.5. In-Place Software Updates
 
-Updates to Moode are made available periodically and are downloaded
-and installed by clicking "CHECK for software update" in System Config.
+Updates to Moode are available via "CHECK for software update" in System Config. The updates are keyed to a major release series for example Moode 9. There are no in-place updates across major releases for example Moode 8 to Moode 9. Each new major release requires a fresh image.
 
 # 4. Imager Tutorial
 
-Text and images go here
+Moode requires using the official Raspberry Pi Imager to configure the OS image before writing it to an SD Card. Follow these step by step instructions to carry out this process.
+
+1. [Download](https://www.raspberrypi.com/software/) the official Raspberry Pi Imager.
+<div style="margin-bottom:1em"><img src="../images/imager_1.png" width="400px"></div>
+
+2. Click CHOOSE OS and scroll down to "Media Player OS" and then to "moOde audio player" and then click the version of moOde you would like to install.
+<div style="margin-bottom:1em"><img src="../images/imager_2.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="../images/imager_3.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="../images/imager_4.png" width="400px"></div>
+
+  Or if you have downloaded moOde directly from the Download page at [moodeaudio.org](https://moodeaudio.org), then scroll down to “Use custom” and select the downloaded zip file from the file chooser.
+<div style="margin-bottom:1em"><img src="../images/imager_5.png" width="400px"></div>
+
+3. After the OS is selected click CHOOSE STORAGE then click the SD card drive where the OS image will be written.
+<div style="margin-bottom:1em"><img src="../images/imager_6.png" width="400px"></div>
+
+4. Click NEXT to display the OS customization screen
+<div style="margin-bottom:1em"><img src="../images/imager_7.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="../images/imager_8.png" width="400px"></div>
+
+5. Click EDIT SETTINGS to display the OS settings screen. On the GENERAL tab enter your desired hostname, userid and password, optional WiFi SSID and password and finally the Locale.
+<div style="margin-bottom:1em"><img src="../images/imager_9.png" width="400px"></div>
+
+6. Click the SERVICES tab and enable SSH with password authentication.
+<div style="margin-bottom:1em"><img src="../images/imager_10.png" width="400px"></div>
+
+7. Click SAVE which will return you to the OS Customization screen.
+<div style="margin-bottom:1em"><img src="../images/imager_11.png" width="400px"></div>
+
+8. Click YES to apply the customizations and display the confirmation screen.
+<div style="margin-bottom:1em"><img src="../images/imager_12.png" width="400px"></div>
+
+9. Click YES to proceed and write the OS image to the SD Card and automatically verify it after the write completes.
+<div style="margin-bottom:1em"><img src="../images/imager_13.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="../images/imager_14.png" width="400px"></div>
+
+10. After verification is complete the SD Card can be removed from the drive and inserted into a Raspberry Pi for initial startup.
+<div style="margin-bottom:1em"><img src="../images/imager_15.png" width="400px"></div>
 
 # 5. Advanced
 
