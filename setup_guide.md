@@ -25,19 +25,21 @@ width="300px"></span>
 
 # 1. Introduction
 
-Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter http:// moode, moode.local or ip_address in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS or Android to create a Moode App.
+Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter http:// moode, moode.local or ip_address in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS or Android to create a moOde App.
 
 [Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf)  contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the "m" menu in the player.
 
 # 2. Creating the boot SD Card
 
-Before you can access Moode a pre-built image must be written to a micro SD Card using the official Raspberry Pi Imager. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the Media Player OS section of the Imager. Refer to the included [Tutorial](#4-imager-tutorial) for step by step instructions.
+Before you can access Moode a pre-built image must be written to a micro SD Card using the official Raspberry Pi Imager. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the Media Player OS section of the Imager.
+
+Refer to the included [Tutorial](#4-imager-tutorial) for step by step instructions.
 
 Note: For improved security pre-built images do not contain a default logon userid, WiFi SSID or Hotspot password and Secure Shell (SSH) access is disabled by default. These are setup using the Imager.
 
 # 3. After Startup
 
-After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to the Library and make use of features that enhance the usability and function of Moode.
+After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to create your Library and make use of all the advanced Audiophile-grade features to enhance your listening experience.
 
 ## 3.1. Audio Device
 
@@ -64,9 +66,9 @@ Moode can be used as a File Server by turning on one or more of the file sharing
 
 - SMB File Sharing. SMB (Samba) shares named NAS, Playlists, and SDCard are automatically created. Each USB disk will also have a Samba share created that is named after its Disk Label.
 
-- NFS File Sharing. Access and options defaults are provided but can be manually overridden. Each USB disk will have an NFS export created whose path is /media/disk_label.
+- NFS File Sharing. Access and option defaults are provided but can be manually overridden. Each USB disk will have an NFS export created whose path is /media/Disk Label.
 
-- DLNA File Sharing. The DLNA media server indexes music sources defined for MPD and makes them available to UPnP control points.
+- DLNA File Sharing. The DLNA media server indexes music sources defined for MPD and makes them available to a UPnP control point.
 
 ## 3.5. In-Place Software Updates
 
