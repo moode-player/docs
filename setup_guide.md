@@ -2,7 +2,7 @@
 
 Setup Guide <!-- omit in toc -->
 ===============================================
-<span style="float:right;margin-right:1em;margin-top:-5em"><img src="../images/moode-r900-logotype-clear-black-cropped.png"
+<span style="float:right;margin-right:1em;margin-top:-5em"><img src="images/moode-r900-logotype-clear-black-cropped.png"
 width="200px"></span>
 (C) Tim Curtis 2017  
 (C) @azimuth 2024 Pi Imager tutorial
@@ -76,41 +76,41 @@ Updates to Moode are available via "CHECK for software update" in System Config.
 Moode requires using the official Raspberry Pi Imager to configure the OS image before writing it to an SD Card. Follow these step by step instructions to carry out this process.
 
 1. [Download](https://www.raspberrypi.com/software/) the official Raspberry Pi Imager.
-<div style="margin-bottom:1em"><img src="../images/imager_1.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_1.png" width="400px"></div>
 
 2. Click CHOOSE OS and scroll down to "Media Player OS" and then to "moOde audio player" and then click the version of moOde you would like to install.
-<div style="margin-bottom:1em"><img src="../images/imager_2.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="../images/imager_3.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="../images/imager_4.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_2.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_3.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_4.png" width="400px"></div>
 
   Or if you have downloaded moOde directly from the Download page at [moodeaudio.org](https://moodeaudio.org), then scroll down to “Use custom” and select the downloaded zip file from the file chooser.
-<div style="margin-bottom:1em"><img src="../images/imager_5.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_5.png" width="400px"></div>
 
 3. After the OS is selected click CHOOSE STORAGE then click the SD card drive where the OS image will be written.
-<div style="margin-bottom:1em"><img src="../images/imager_6.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_6.png" width="400px"></div>
 
 4. Click NEXT to display the OS customization screen
-<div style="margin-bottom:1em"><img src="../images/imager_7.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="../images/imager_8.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_7.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_8.png" width="400px"></div>
 
 5. Click EDIT SETTINGS to display the OS settings screen. On the GENERAL tab enter your desired hostname, userid and password, optional WiFi SSID and password and finally the Locale.
-<div style="margin-bottom:1em"><img src="../images/imager_9.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_9.png" width="400px"></div>
 
 6. Click the SERVICES tab and enable SSH with password authentication.
-<div style="margin-bottom:1em"><img src="../images/imager_10.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_10.png" width="400px"></div>
 
 7. Click SAVE which will return you to the OS Customization screen.
-<div style="margin-bottom:1em"><img src="../images/imager_11.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_11.png" width="400px"></div>
 
 8. Click YES to apply the customizations and display the confirmation screen.
-<div style="margin-bottom:1em"><img src="../images/imager_12.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_12.png" width="400px"></div>
 
 9. Click YES to proceed and write the OS image to the SD Card and automatically verify it after the write completes.
-<div style="margin-bottom:1em"><img src="../images/imager_13.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="../images/imager_14.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_13.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_14.png" width="400px"></div>
 
 10. After verification is complete the SD Card can be removed from the drive and inserted into a Raspberry Pi for initial startup.
-<div style="margin-bottom:1em"><img src="../images/imager_15.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager_15.png" width="400px"></div>
 
 # 5. Advanced
 
