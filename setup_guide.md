@@ -41,6 +41,8 @@ Note: For improved security pre-built images do not contain a default logon user
 
 After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to create your Library and make use of all the advanced Audiophile-grade features to enhance your listening experience.
 
+[Back to Top](#setup-guide-)
+
 ## 3.1. Audio Device
 
 ## 3.2. Music Files
@@ -114,6 +116,8 @@ Moode requires using the official Raspberry Pi Imager to configure the OS image 
 
 10. After verification is complete the SD Card can be removed from the drive and inserted into a Raspberry Pi for initial startup.
 <div style="margin-bottom:1em"><img src="images/imager_15.png" width="400px"></div>
+
+[Back to Top](#setup-guide-)
 
 # 5. Advanced
 
