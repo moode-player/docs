@@ -25,7 +25,7 @@ width="300px"></span>
 
 # 1. Introduction
 
-Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter http:// moode, moode.local or ip_address in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS or Android to create a moOde App.
+Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter `http://moode, moode.local or ip_address` in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS or Android to create a moOde App.
 
 [Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf)  contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the "m" menu in the player.
 
@@ -45,7 +45,11 @@ After Moode starts up and you access it in your Web Browser you can configure yo
 
 ## 3.1. Audio Device
 
+Text goes here
+
 ## 3.2. Music Files
+
+Text goes here
 
 ## 3.3. Hotspot
 
@@ -124,7 +128,7 @@ Moode requires using the official Raspberry Pi Imager to configure the OS image 
 ## 5.1. REST API
 
 If an HTTP command returns data it is in JSON format following REST guidelines.
-The base URL is http://moode/command/?cmd=
+The base URL is `http://moode/command/?cmd=`
 
 get_currentsong
 Returns contents of the file /var/local/www/currentsong.txt.
