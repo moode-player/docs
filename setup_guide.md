@@ -8,13 +8,12 @@ width="300px"></span>
 (C) Tim Curtis 2024  
 (C) @azimuth 2024 Pi Imager tutorial  
 
-
 ### Table of Contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
 - [2. Creating a boot SD Card](#2-creating-a-boot-sd-card)
 - [3. After Startup](#3-after-startup)
-  - [3.1. Audio Device](#31-audio-device)
+  - [3.1. Audio Devices](#31-audio-devices)
   - [3.2. Music Files](#32-music-files)
   - [3.3. Hotspot](#33-hotspot)
   - [3.4. File Sharing](#34-file-sharing)
@@ -44,7 +43,7 @@ After Moode starts up and you access it in your Web Browser you can configure yo
 
 [Back to Top](#setup-guide-)
 
-## 3.1. Audio Device
+## 3.1. Audio Devices
 
 #### USB audio device
 - Plug in the device
