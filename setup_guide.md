@@ -8,8 +8,6 @@ width="300px"></span>
 (C) Tim Curtis 2024  
 (C) @azimuth 2024 Pi Imager tutorial
 
----
-
 ### Table of Contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
