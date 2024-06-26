@@ -48,7 +48,7 @@ After Moode starts up and you access it in your Web Browser you can configure yo
 #### USB audio device
 - Plug in the device
 - Menu > Configure > Audio
-- Set `Output device` to to the name of the USB audio device
+- Set `Output device` to the name of the USB audio device
 
 #### I2S audio device
 - Power down the Pi and attach the device to the 40-pin header
@@ -57,7 +57,7 @@ After Moode starts up and you access it in your Web Browser you can configure yo
 - Set `Named I2S device or DT overlay` to the correct device or overlay name
 - Restart the Pi
 - Menu > Configure > Audio
-- Set `Output device` to to the name of the I2S audio device
+- Set `Output device` to the name of the I2S audio device
 
 #### Audio device options
 
