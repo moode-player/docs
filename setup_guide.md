@@ -111,7 +111,7 @@ Moode can be used as a File Server by turning on one or more of the file sharing
 
 - DLNA File Sharing. The DLNA media server indexes music sources defined for MPD and makes them available to a UPnP control point.
 
-## 3.5. In-Place Software Updates
+## 3.5. Software Updates
 
 Updates to Moode are available via `CHECK for software update` in System Config. The updates are keyed to a major release series for example Moode 9. There are no in-place updates across major releases for example Moode 8 to Moode 9. Each new major release requires a fresh image.
 
