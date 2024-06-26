@@ -6,7 +6,8 @@ Setup Guide <!-- omit in toc -->
 width="300px"></span>
 
 (C) Tim Curtis 2024  
-(C) @azimuth 2024 Pi Imager tutorial
+(C) @azimuth 2024 Pi Imager tutorial  
+
 
 ### Table of Contents <!-- omit in toc -->
 
@@ -114,6 +115,8 @@ Moode can be used as a File Server by turning on one or more of the file sharing
 ## 3.5. In-Place Software Updates
 
 Updates to Moode are available via `CHECK for software update` in System Config. The updates are keyed to a major release series for example Moode 9. There are no in-place updates across major releases for example Moode 8 to Moode 9. Each new major release requires a fresh image.
+
+[Back to Top](#setup-guide-)
 
 # 4. Imager Tutorial
 
@@ -235,3 +238,5 @@ This command turns the CoverView screen saver on or off.
 #### restart-renderer.php
 This command restarts the specified renderer.  
 `/var/www/util/restart-renderer.php --help`  
+
+[Back to Top](#setup-guide-)
