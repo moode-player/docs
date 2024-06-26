@@ -5,7 +5,7 @@ Setup Guide <!-- omit in toc -->
 <span style=""><img src="images/moode-r900-logotype-clear-black-cropped.png"
 width="300px"></span>
 
-(C) Tim Curtis 2017  
+(C) Tim Curtis 2024  
 (C) @azimuth 2024 Pi Imager tutorial
 
 ### Table of Contents <!-- omit in toc -->
@@ -31,40 +31,75 @@ Moode audio player is a Free Open Source Software (FOSS) music streamer for the 
 
 # 2. Creating the boot SD Card
 
-Before you can access Moode a pre-built image must be written to a micro SD Card using the official Raspberry Pi Imager. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the Media Player OS section of the Imager.
+Before you can access Moode a pre-built image must be configured and written to a micro SD Card using the official Raspberry Pi Imager [Imager]. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
 
 Refer to the included [Tutorial](#4-imager-tutorial) for step by step instructions.
 
-Note: For improved security pre-built images do not contain a default logon userid, WiFi SSID or Hotspot password and Secure Shell (SSH) access is disabled by default. These are setup using the Imager.
+Note: For improved security, pre-built images do not contain a default logon userid, WiFi SSID or Hotspot password, and Secure Shell (SSH) access is disabled by default. These are configured using the Imager.
 
 # 3. After Startup
 
-After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to create your Library and make use of all the advanced Audiophile-grade features to enhance your listening experience.
+After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to create your Library, connect an HDMI display and make use of all the advanced, Audiophile-grade features to create a great listening experience.
 
 [Back to Top](#setup-guide-)
 
 ## 3.1. Audio Device
 
-Text goes here
+#### USB audio device
+- Plug in the device
+- Menu > Configure > Audio
+- Set `Output device` to to the name of the USB audio device
+
+#### I2S audio device
+- Power down the Pi and attach the device to the 40-pin header
+- Power up the Pi
+- Menu > Configure > Audio
+- Set `Named I2S device or DT overlay` to the correct device or overlay name
+- Restart the Pi
+- Menu > Configure > Audio
+- Set `Output device` to to the name of the I2S audio device
+
+#### Audio device options
+
+There are many other audio device options available for example `Volume type`, `Chip options`, and `ALSA output mode` just to name a few. For more information on a given option read the help text underneath it or the expandable info help next to it.
 
 ## 3.2. Music Files
 
-Text goes here
+#### USB storage device
+- Plug in the device
+- Menu > Update library
+- Stay on the screen and wait for the activity spinner to be cleared
+
+#### Boot SD Card storage
+- Place your music files under the directory `/mnt/SDCARD`
+- Menu > Update library
+- Stay on the screen and wait for the activity spinner to be cleared
+
+#### Network Attached Storage (NAS) Device
+- Menu > Configure > Library
+- Click `CREATE music source`
+- Enter the Type, Path and credentials that provides access to your NAS
+- Click `SAVE`
+- A green checkmark will appear if the NAS was successfully mounted
+- Click the Arrow or Home icon in the upper left of the screen to return to Playback view
+- Menu > Update library
+- Stay on the screen and wait for the activity spinner to be cleared
 
 ## 3.3. Hotspot
 
 Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. Refer to the
 default settings below.
 
-- SSID          Moode
-- Password      As set in Network Config screen
-- URL           http:// moode.local or 172.24.1.1
+|Setting|Value|
+|:-|:-|
+|SSID|Moode|
+|Password|As set in the Network Config screen|
+|URL|`http://moode.local or http://172.24.1.1`|
 
-The Hotspot starts when any of the following are true.
+The Hotspot starts when one of the following are true.
 
 - WiFi SSID is set to "Activate Hotspot" in Network Config.
-- WiFi SSID is defined in Network Config but no IP address was assigned after
-attempting to connect to the configured SSID or any saved SSID's.
+- WiFi SSID is configured in Network Config but no IP address was assigned after attempting to connect to the configured SSID or any saved SSID's.
 
 ## 3.4. File Sharing
 
@@ -78,7 +113,7 @@ Moode can be used as a File Server by turning on one or more of the file sharing
 
 ## 3.5. In-Place Software Updates
 
-Updates to Moode are available via "CHECK for software update" in System Config. The updates are keyed to a major release series for example Moode 9. There are no in-place updates across major releases for example Moode 8 to Moode 9. Each new major release requires a fresh image.
+Updates to Moode are available via `CHECK for software update` in System Config. The updates are keyed to a major release series for example Moode 9. There are no in-place updates across major releases for example Moode 8 to Moode 9. Each new major release requires a fresh image.
 
 # 4. Imager Tutorial
 
@@ -87,34 +122,34 @@ Moode requires using the official Raspberry Pi Imager to configure the OS image 
 1. [Download](https://www.raspberrypi.com/software/) the official Raspberry Pi Imager.
 <div style="margin-bottom:1em"><img src="images/imager_1.png" width="400px"></div>
 
-2. Click CHOOSE OS and scroll down to "Media Player OS" and then to "moOde audio player" and then click the version of moOde you would like to install.
+2. Click CHOOSE OS and scroll down to `Media Player OS` and then to `moOde audio player` and then click the version of moOde you would like to install.
 <div style="margin-bottom:1em"><img src="images/imager_2.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager_3.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager_4.png" width="400px"></div>
 
-  Or if you have downloaded moOde directly from the Download page at [moodeaudio.org](https://moodeaudio.org), then scroll down to “Use custom” and select the downloaded zip file from the file chooser.
+  Or if you have downloaded moOde directly from the Download page at [moodeaudio.org](https://moodeaudio.org), then scroll down to `Use custom` and select the downloaded zip file from the file chooser.
 <div style="margin-bottom:1em"><img src="images/imager_5.png" width="400px"></div>
 
-3. After the OS is selected click CHOOSE STORAGE then click the SD card drive where the OS image will be written.
+3. After the OS is selected click `CHOOSE STORAGE` then click the SD card drive where the OS image will be written.
 <div style="margin-bottom:1em"><img src="images/imager_6.png" width="400px"></div>
 
-4. Click NEXT to display the OS customization screen
+4. Click `NEXT` to display the `OS customization` screen
 <div style="margin-bottom:1em"><img src="images/imager_7.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager_8.png" width="400px"></div>
 
-5. Click EDIT SETTINGS to display the OS settings screen. On the GENERAL tab enter your desired hostname, userid and password, optional WiFi SSID and password and finally the Locale.
+5. Click `EDIT SETTINGS` to display the `OS customization` screen. On the `GENERAL` tab enter your desired hostname, userid and password, optional WiFi SSID and password and finally the Locale.
 <div style="margin-bottom:1em"><img src="images/imager_9.png" width="400px"></div>
 
-6. Click the SERVICES tab and enable SSH with password authentication.
+6. Click the `SERVICES` tab and enable SSH with password authentication.
 <div style="margin-bottom:1em"><img src="images/imager_10.png" width="400px"></div>
 
-7. Click SAVE which will return you to the OS Customization screen.
+7. Click SAVE which will return you to the `OS Customization` screen.
 <div style="margin-bottom:1em"><img src="images/imager_11.png" width="400px"></div>
 
-8. Click YES to apply the customizations and display the confirmation screen.
+8. Click `YES` to apply the customizations and display the confirmation screen.
 <div style="margin-bottom:1em"><img src="images/imager_12.png" width="400px"></div>
 
-9. Click YES to proceed and write the OS image to the SD Card and automatically verify it after the write completes.
+9. Click `YES` to proceed and write the OS image to the SD Card and automatically verify it after the write completes.
 <div style="margin-bottom:1em"><img src="images/imager_13.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager_14.png" width="400px"></div>
 
@@ -127,47 +162,45 @@ Moode requires using the official Raspberry Pi Imager to configure the OS image 
 
 ## 5.1. REST API
 
-If an HTTP command returns data it is in JSON format following REST guidelines.
-The base URL is `http://moode/command/?cmd=`
+The base URL for submitting commands to Moode is `http://moode/command/?cmd=` If a command returns data it is in JSON format following REST guidelines.
 
-get_currentsong
+#### get_currentsong
 Returns contents of the file /var/local/www/currentsong.txt.
 Turn on the Metadata file option in Audio Config to generate this file.
 
-get_output_format
+#### get_output_format
 ALSA output format or 'Not playing' is returned.
 
-get_volume
+#### get_volume
 Returns the Knob volume.
 
-set_volume
-Sets the knob volume to value N, up or down N or mute toggle.
-Arguments: N | -up N | -dn N | -mute
+#### set_volume
+Sets the knob volume to value N, up or down N or mute toggle.  
+Arguments: `N | -up N | -dn N | -mute`
 
-get_cdsp_config
+#### get_cdsp_config
 Returns the current CamillaDSP config name
 
-set_cdsp_config
-Sets CamillaDSP to the specified config name.
+#### set_cdsp_config
+Sets CamillaDSP to the specified config name.  
 Arguments: A config name from the list of available configs including 'Off'.
 
-set_coverview
-Turns CoverView screen saver on or off.
-Arguments: -on | -off
+#### set_coverview
+Turns CoverView screen saver on or off.  
+Arguments: `-on | -off`
 
-upd_library
+#### upd_library
 Submits an "Update library" command.
 
-restart_renderer
-Restarts the specified renderer.
-Arguments: --bluetooth | --airplay | --spotify | --squeezelite | --plexamp | --roonbridge
+#### restart_renderer
+Restarts the specified renderer.  
+Arguments: `--bluetooth | --airplay | --spotify | --squeezelite | --plexamp | --roonbridge`
 
-MPD commands
-See MPD protocol for list of commands.
-https://mpd.readthedocs.io/en/latest/protocol.html
+#### MPD commands
+See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands.
 
-Deprecated REST API (http) commands. The following commands have been replaced
-by the equivalent new commands above and at some point will not be supported. It is recommened to update your scripts to use the new commands.
+#### Deprecated REST API commands.
+In Moode 9 series the following commands have been replaced by the equivalent new commands above and at some point will not be supported. It is recommended to update your scripts to use the new commands.
 
 - vol.sh
 - coverview.php
@@ -176,114 +209,29 @@ by the equivalent new commands above and at some point will not be supported. It
 
 ## 5.2. SSH Commands
 
-moodeutl
+There are several useful commands that can be run at the prompt in an SSH terminal.
+
+#### moodeutl
 This command can be used for printing logs, status or for manipulating certain
-parts of moOde. For a list of options type moodeutl --help
+parts of Moode.  
+`moodeutl --help`.
 
-mpc
-This command can be used to control MPD. For a list of options type mpc help
+#### mpc
+This command can be used to control MPD.  
+`mpc help`.
 
-vol.sh
-This command can be used to get or set MPD volume and update the volume knob.
-For a list of options type /var/www/util/vol.sh --help
-To run it type /var/www/util/vol.sh <options>
+#### vol.sh
+This command can be used to get or set MPD volume and update the Volume Knob.  
+`/var/www/util/vol.sh --help`.
 
-libupd-submit.php
-This command submits a "Library update".
-To run it type /var/www/util/libupd-submit.php
+#### libupd-submit.php
+This command performs the equivalent of Menu > Library update.  
+`/var/www/util/libupd-submit.php`
 
-coverview.php
-This command turns the CoverView screen saver on or off.
-To run it type /var/www/util/coverview.php -on | -off
+#### coverview.php
+This command turns the CoverView screen saver on or off.  
+`/var/www/util/coverview.php -on | -off`
 
-restart-renderer.php
-This command restarts the specified renderer.
-To run it type /var/www/util/restart-renderer.php --renderer
---bluetooth    Restart Bluetooth
---airplay      Restart AirPlay
---spotify      Restart Spotify Connect
---squeezelite  Restart Squeezelite
---plexamp      Restart Plexamp
---roonbridge   Restart RoonBridge
-
-
----------------Old stuff---------------
-8. Player Setup And Configuration
-
-1. INITIAL SETUP
-
- a) Insert boot SD card
- b) Insert ethernet cable or alternatively use WiFi SSID defined in Pi Imager
- b) Power on
- c) http://moode | http://moode.local | http://IP_ADDRESS
-
-9. Audio Device Setup
-
- - USB DEVICE
- a) Plug in USB audio device
- a) Menu, Configure, Audio
- c) Set Output device to to the name of the USB audio device
-
- - I2S DEVICE
- a) Menu, Configure, Audio
- b) Set Named I2S device or DT overlay to the correct device or overlay name
- c) Menu, Power, Restart
- d) Menu, Configure, Audio
- c) Set Output device to to the name of the I2S audio device
-
-10. Add Music Files
-
- - USB STORAGE DEVICES
- a) Insert USB storage device
- b) Menu, Update library
- c) Wait for completion (no spinner)
-
- - BOOT SDCARD STORAGE
- a) Menu, Update library
- b) Wait for completion (no spinner)
-
- - NAS DEVICE
- a) Menu, Configure, Library
- b) CREATE Music source
- c) After SAVE, return to Playback or Library
- d) Menu, Update library
- e) Wait for completion (no spinner)
-
-5. VERIFY AUDIO PLAYBACK
-
- a) http://moode | http://moode.local | http://IP_ADDRESS
- b) Play one of the radio stations
- c) Switch to Library Folder view
- d) Navigate to the SDCARD/Stereo Test
- e) Play the "LR Channel And Phase" track
-
-11. Custom Configurations
-
-Customize the player by using any of the following procedures.
-
-1. CONFIGURE FOR WIFI-ONLY CONNECTION
-
- - Ethernet cable connected
- a) Insert WiFi adapter or use Pi Integrated WiFi
- b) http://moode | http://moode.local | http://IP_ADDRESS
- c) Menu, Configure, Network
- d) Configure a WiFi connection
- e) Menu, Power, Shutdown
- f) Unplug Ethernet cable
- g) Power on
-
- - Hotspot mode
- a) Join Hotspot SSID, password = Refer to MOODE OS IMAGE section
- b) http://moode.local | http://172.24.1.1
- c) Menu, Configure, Network
- d) Configure a WiFi connection
- e) Menu, Power, Restart
-
-2. SWITCH FROM WIFI-ONLY BACK TO ETHERNET-ONLY
-
-    a) Plug in Ethernet cable
-    b) Menu, Configure, Network
-    c) RESET network configuration to defaults
-    d) Menu, Power, Shutdown
-    e) Remove WiFi adapter
-    f) Power on
+#### restart-renderer.php
+This command restarts the specified renderer.  
+`/var/www/util/restart-renderer.php --help`  
