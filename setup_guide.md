@@ -27,11 +27,11 @@ width="300px"></span>
 
 Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter `http://moode, moode.local or ip_address` in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS or Android to create a moOde App.
 
-[Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf){:target="_blank"} contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the `m` menu in the player.
+[Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf)  contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the `m` menu in the player.
 
 # 2. Creating a boot SD Card
 
-Before you can access Moode a pre-built image must be configured and written to a micro SD Card using the official Raspberry Pi Imager [Imager]. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org){:target="_blank"} Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
+Before you can access Moode a pre-built image must be configured and written to a micro SD Card using the official Raspberry Pi Imager [Imager]. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
 
 Refer to the included [Tutorial](#4-imager-tutorial) for step by step instructions.
 
@@ -121,7 +121,7 @@ Updates to Moode are available via `CHECK for software update` in System Config.
 
 Moode requires using the official Raspberry Pi Imager to configure the OS image before writing it to an SD Card. Follow these step by step instructions to carry out this process.
 
-1. [Download](https://www.raspberrypi.com/software/){:target="_blank"} the official Raspberry Pi Imager.
+1. [Download](https://www.raspberrypi.com/software/) the official Raspberry Pi Imager.
 <div style="margin-bottom:1em"><img src="images/imager_1.png" width="400px"></div>
 
 2. Click CHOOSE OS and scroll down to `Media Player OS` and then to `moOde audio player` and then click the version of moOde you would like to install.
@@ -129,7 +129,7 @@ Moode requires using the official Raspberry Pi Imager to configure the OS image 
 <div style="margin-bottom:1em"><img src="images/imager_3.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager_4.png" width="400px"></div>
 
-  Or if you have downloaded moOde directly from the Download page at [moodeaudio.org](https://moodeaudio.org){:target="_blank"}, then scroll down to `Use custom` and select the downloaded zip file from the file chooser.
+  Or if you have downloaded moOde directly from the Download page at [moodeaudio.org](https://moodeaudio.org), then scroll down to `Use custom` and select the downloaded zip file from the file chooser.
 <div style="margin-bottom:1em"><img src="images/imager_5.png" width="400px"></div>
 
 3. After the OS is selected click `CHOOSE STORAGE` then click the SD card drive where the OS image will be written.
@@ -199,7 +199,7 @@ Restarts the specified renderer.
 Arguments: `--bluetooth | --airplay | --spotify | --squeezelite | --plexamp | --roonbridge`
 
 #### MPD commands
-See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html){:target="_blank"} for list of commands.
+See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands.
 
 #### Deprecated REST API commands.
 In Moode 9 series the following commands have been replaced by the equivalent new commands above and at some point will not be supported. It is recommended to update your scripts to use the new commands.
