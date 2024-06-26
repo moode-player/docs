@@ -11,7 +11,7 @@ width="300px"></span>
 ### Table of Contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
-- [2. Creating the Boot SD Card](#2-creating-the-boot-sd-card)
+- [2. Creating a boot SD Card](#2-creating-a-boot-sd-card)
 - [3. After Startup](#3-after-startup)
   - [3.1. Audio Device](#31-audio-device)
   - [3.2. Music Files](#32-music-files)
@@ -29,7 +29,7 @@ Moode audio player is a Free Open Source Software (FOSS) music streamer for the 
 
 [Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf)  contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the "m" menu in the player.
 
-# 2. Creating the boot SD Card
+# 2. Creating a boot SD Card
 
 Before you can access Moode a pre-built image must be configured and written to a micro SD Card using the official Raspberry Pi Imager [Imager]. Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
 
