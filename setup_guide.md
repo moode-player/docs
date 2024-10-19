@@ -121,6 +121,8 @@ Updates to Moode are available via `CHECK for software update` in System Config.
 
 Moode requires using the official Raspberry Pi Imager to configure the OS image before writing it to an SD Card. Follow these step by step instructions to carry out this process.
 
+__IMPORTANT!__ The image must be configured with a userid, password and SSH enabled or Moode will not function correctly.
+
 1. [Download](https://www.raspberrypi.com/software/) the official Raspberry Pi Imager.
 <div style="margin-bottom:1em"><img src="images/imager_1.png" width="400px"></div>
 
