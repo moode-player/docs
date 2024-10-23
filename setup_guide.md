@@ -229,8 +229,8 @@ This command can be used to get or set MPD volume and update the Volume Knob.
 `/var/www/util/vol.sh --help`.
 
 #### libupd-submit.php
-This command performs the equivalent of Menu > Library update.  
-`/var/www/util/libupd-submit.php`
+This command performs the equivalent of Menu > Library update. Run using sudo.
+`sudo /var/www/util/libupd-submit.php`
 
 #### coverview.php
 This command turns the CoverView screen saver on or off.  
