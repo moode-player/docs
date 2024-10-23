@@ -232,6 +232,10 @@ This command can be used to get or set MPD volume and update the Volume Knob.
 This command performs the equivalent of Menu > Library update.  
 `/var/www/util/libupd-submit.php`
 
+If this does not work, there is an alternative way.
+`mpc update`
+This can also be added into a contab job, to be ran every X minutes, or a simmilar trigger.
+
 #### coverview.php
 This command turns the CoverView screen saver on or off.  
 `/var/www/util/coverview.php -on | -off`
