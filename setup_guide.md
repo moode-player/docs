@@ -87,8 +87,7 @@ There are many other audio device options available for example `Volume type`, `
 
 ## 3.3. Hotspot
 
-Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. Refer to the
-default settings below.
+Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. Note that since the image does not contain any default passwords the Hotspot password can only be set via the Network Config screen in the WebUI thus the Pi must first be connected via WiFi or Ethernet. Refer to the default settings below.
 
 |Setting|Value|
 |:-|:-|
