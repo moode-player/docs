@@ -9,7 +9,7 @@ The source for this section is from the [MPD Documentation](https://mpd.readthed
 
 ### Tags supported by MPD:
 
-Tags ... are the subset used by moOde.
+Tags marked in Bold are the subset used by moOde.
 
 __artist:__ the artist name. Its meaning is not well-defined; see “composer” and “performer” for more specific tags.  
 `artistsort:` same as artist, but for sorting. This usually omits prefixes such as “The”.  
