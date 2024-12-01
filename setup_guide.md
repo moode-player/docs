@@ -12,16 +12,17 @@ width="300px"></span>
 
 - [1. Introduction](#1-introduction)
 - [2. Creating a boot SD Card](#2-creating-a-boot-sd-card)
-- [3. After Startup](#3-after-startup)
-  - [3.1. Audio Devices](#31-audio-devices)
-  - [3.2. Music Files](#32-music-files)
-  - [3.3. Hotspot](#33-hotspot)
-  - [3.4. File Sharing](#34-file-sharing)
-  - [3.5. Software Updates](#35-software-updates)
-- [4. Imager Tutorial](#4-imager-tutorial)
-- [5. Advanced](#5-advanced)
-  - [5.1. REST API](#51-rest-api)
-  - [5.2. SSH Commands](#52-ssh-commands)
+- [3. Starting up the system](#3-starting-up-the-system)
+- [4. After Startup](#4-after-startup)
+  - [4.1. Audio Devices](#41-audio-devices)
+  - [4.2. Music Files](#42-music-files)
+  - [4.3. Hotspot](#43-hotspot)
+  - [4.4. File Sharing](#44-file-sharing)
+  - [4.5. Software Updates](#45-software-updates)
+- [5. Pi Imager Tutorial](#5-pi-imager-tutorial)
+- [6. Advanced](#6-advanced)
+  - [6.1. REST API](#61-rest-api)
+  - [6.2. SSH Commands](#62-ssh-commands)
 
 # 1. Introduction
 
@@ -33,17 +34,21 @@ Moode audio player is a Free Open Source Software (FOSS) music streamer for the 
 
 Before you can access Moode a pre-built image must be configured and written to a micro SD Card using the official [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
-__IMPORTANT!__ The image must be configured with a userid, password and SSH enabled or Moode will not function correctly. Refer to the [Imager Tutorial](#4-imager-tutorial) section for step by step instructions.
+__IMPORTANT!__ The image must be configured with a userid, password and SSH enabled or Moode will not function correctly. Refer to the [Pi Imager Tutorial](#4-pi-imager-tutorial) section for step by step instructions.
 
-Download links for the Imager and Moode pre-built images are available on the Downloads page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
+Download links for the Pi Imager and Moode pre-built images are available on the Download page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
 
-# 3. After Startup
+# 3. Starting up the system
+
+The first startup will take a while. The system automatically reboots 3 times after initially starting to import and apply the settings from the Pi Imager and complete Moode startup configuration.
+
+# 4. After Startup
 
 After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to create your Library, connect an HDMI display and make use of all the advanced, Audiophile-grade features to create a great listening experience.
 
 [Back to Top](#setup-guide-)
 
-## 3.1. Audio Devices
+## 4.1. Audio Devices
 
 #### USB audio device
 - Plug in the device
@@ -63,7 +68,7 @@ After Moode starts up and you access it in your Web Browser you can configure yo
 
 There are many other audio device options available for example `Volume type`, `Chip options`, and `ALSA output mode` just to name a few. For more information on a given option read the help text underneath it or the expandable info help next to it.
 
-## 3.2. Music Files
+## 4.2. Music Files
 
 #### USB storage device
 - Plug in the device
@@ -85,7 +90,7 @@ There are many other audio device options available for example `Volume type`, `
 - Menu > Update library
 - Stay on the screen and wait for the activity spinner to be cleared
 
-## 3.3. Hotspot
+## 4.3. Hotspot
 
 Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. Note that since the image does not contain any default passwords the Hotspot password can only be set via the Network Config screen in the WebUI thus the Pi must first be connected via WiFi or Ethernet. Refer to the default settings below.
 
@@ -100,7 +105,7 @@ The Hotspot starts when one of the following are true.
 - WiFi SSID is set to "Activate Hotspot" in Network Config.
 - WiFi SSID is configured in Network Config but no IP address was assigned after attempting to connect to the configured SSID or any saved SSID's.
 
-## 3.4. File Sharing
+## 4.4. File Sharing
 
 Moode can be used as a File Server by turning on one or more of the file sharing protocols listed below. These protocols and their respective options are in the File Sharing section of System Config.
 
@@ -110,13 +115,13 @@ Moode can be used as a File Server by turning on one or more of the file sharing
 
 - DLNA File Sharing. The DLNA media server indexes music sources defined for MPD and makes them available to a UPnP control point.
 
-## 3.5. Software Updates
+## 4.5. Software Updates
 
 Updates to Moode are available via `CHECK for software update` in System Config. The updates are keyed to a major release series for example Moode 9. There are no in-place updates across major releases for example Moode 8 to Moode 9. Each new major release requires a fresh image.
 
 [Back to Top](#setup-guide-)
 
-# 4. Imager Tutorial
+# 5. Pi Imager Tutorial
 
 Moode requires using the official Raspberry Pi Imager to configure the OS image before writing it to an SD Card. Follow these step by step instructions to carry out this process.
 
@@ -161,9 +166,9 @@ __IMPORTANT!__ The image must be configured with a userid, password and SSH enab
 
 [Back to Top](#setup-guide-)
 
-# 5. Advanced
+# 6. Advanced
 
-## 5.1. REST API
+## 6.1. REST API
 
 The base URL for submitting commands to Moode is `http://moode/command/?cmd=` If a command returns data it is in JSON format following REST guidelines.
 
@@ -210,7 +215,7 @@ In Moode 9 series the following commands have been replaced by the equivalent ne
 - libupd-submit.php
 - restart-renderer.php
 
-## 5.2. SSH Commands
+## 6.2. SSH Commands
 
 There are several useful commands that can be run at the prompt in an SSH terminal.
 
