@@ -173,39 +173,94 @@ __IMPORTANT!__ The image must be configured with a userid, password and SSH enab
 The base URL for submitting commands to Moode is `http://moode/command/?cmd=` If a command returns data it is in JSON format following REST guidelines.
 
 #### get_currentsong
-Returns contents of the file /var/local/www/currentsong.txt.
-Turn on the Metadata file option in Audio Config to generate this file.
-
+Gets the contents of the file /var/local/www/currentsong.txt.
+Turn on the `Metadata file` in the MPD options section in Audio Config to generate this file.  
+Returns: contents of metadata file
+```
+JSON:
+{"file":"NAS\/TRX-FLAC\/Yes\/The Yes Album\/06 Perpetual Change.flac","artist":"Yes","album":"The Yes Album","title":"Perpetual Change","coverurl":"\/coverart.php\/NAS%2FTRX-FLAC%2FYes%2FThe%20Yes%20Album%2F06%20Perpetual%20Change.flac","track":"6","date":"197100","composer":"Anderson\/Squire","encoded":"FLAC 16\/44.1 kHz, 2ch","bitrate":"717 kbps","outrate":"PCM 16\/44.1 kHz, 2ch","volume":"15","mute":"1","state":"play"}
+```
 #### get_output_format
-ALSA output format or 'Not playing' is returned.
+Gets the ALSA output format or `Not playing`.
+Returns: output format
 
+```
+JSON:
+{"format":"PCM 16\/44.1 kHz, 2ch"}
+{"format":"Not playing"}
+```
 #### get_volume
-Returns the Knob volume.
-
+Gets the current Knob volume and mute state.  
+Returns: volume and mute state.
+```
+JSON:
+{"volume":"10","muted":"yes"}
+```
 #### set_volume
 Sets the knob volume to value N, up or down N or mute toggle.  
-Arguments: `N | -up N | -dn N | -mute`
-
+Arguments: `N | -up N | -dn N | -mute`  
+Returns: volume and mute state
+```
+JSON:
+{"volume":"15","muted":"no"}
+```
+#### playitem | playitem_next
+Plays the specified item. If the item does not already exists in the Queue it is
+added at the end of the Queue for `play_item` and for `play_item_next` after the currently selected
+item in the Queue.  
+Arguments: URL | URI relative to MPD music root
+Returns: "OK"
+```
+Examples:
+play_item RADIO/Soma FM - Fluid.pls
+play_item NAS/TRX-FLAC/Yes/The Yes Album/03 Starship Trooper.flac
+play_item http://mediaserv38.live-streams.nl:8006/live
+```
+```
+JSON:
+{"info":"OK"}
+```
 #### get_cdsp_config
-Returns the current CamillaDSP config name
-
+Gets the current CamillaDSP signal processing config name.
+Returns: config name
+```
+JSON:
+{"config":"off"}
+```
 #### set_cdsp_config
 Sets CamillaDSP to the specified config name.  
 Arguments: A config name from the list of available configs including 'Off'.
-
+Returns: config name
+```
+JSON:
+{"config":"V2-ProtoDAC.yml"}
+```
 #### set_coverview
-Turns CoverView screen saver on or off.  
+Sets CoverView screen saver on or off.  
 Arguments: `-on | -off`
-
+```
+JSON:
+{"info":"CoverView off"}
+```
 #### upd_library
 Submits an "Update library" command.
-
+Arguments: none
+Returns: ""Library update submitted""
+```
+JSON:
+{"info":"Library update submitted"}
+```
 #### restart_renderer
 Restarts the specified renderer.  
 Arguments: `--bluetooth | --airplay | --spotify | --squeezelite | --plexamp | --roonbridge`
-
+Arguments: none
+Returns: "Render restart submitted"
+```
+JSON:
+{"info":"Render restart submitted"}
+```
 #### MPD commands
-See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands.
+See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands and returns.
 
 #### Deprecated REST API commands.
 In Moode 9 series the following commands have been replaced by the equivalent new commands above and at some point will not be supported. It is recommended to update your scripts to use the new commands.
