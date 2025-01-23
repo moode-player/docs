@@ -206,15 +206,15 @@ JSON:
 ```
 #### playitem | playitem_next
 Plays the specified item. If the item does not already exists in the Queue it is
-added at the end of the Queue for `play_item` and for `play_item_next` after the currently selected
+added at the end of the Queue for `playitem` and for `playitem_next` after the currently selected
 item in the Queue.  
 Arguments: URL | URI relative to MPD music root
 Returns: "OK"
 ```
 Examples:
-play_item RADIO/Soma FM - Fluid.pls
-play_item NAS/TRX-FLAC/Yes/The Yes Album/03 Starship Trooper.flac
-play_item http://mediaserv38.live-streams.nl:8006/live
+playitem RADIO/Soma FM - Fluid.pls
+playitem http://mediaserv38.live-streams.nl:8006/live
+playitem_next NAS/TRX-FLAC/Yes/The Yes Album/03 Starship Trooper.flac
 ```
 ```
 JSON:
