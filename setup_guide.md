@@ -175,88 +175,104 @@ The base URL for submitting commands to Moode is `http://moode/command/?cmd=` If
 #### get_currentsong
 Gets the contents of the file /var/local/www/currentsong.txt.
 Turn on the `Metadata file` in the MPD options section in Audio Config to generate this file.  
-Returns: contents of metadata file
+Arguments: None  
+Returns: Contents of metadata file
 ```
-JSON:
 {"file":"NAS\/TRX-FLAC\/Yes\/The Yes Album\/06 Perpetual Change.flac","artist":"Yes","album":"The Yes Album","title":"Perpetual Change","coverurl":"\/coverart.php\/NAS%2FTRX-FLAC%2FYes%2FThe%20Yes%20Album%2F06%20Perpetual%20Change.flac","track":"6","date":"197100","composer":"Anderson\/Squire","encoded":"FLAC 16\/44.1 kHz, 2ch","bitrate":"717 kbps","outrate":"PCM 16\/44.1 kHz, 2ch","volume":"15","mute":"1","state":"play"}
 ```
 #### get_output_format
-Gets the ALSA output format or `Not playing`.
-Returns: output format
+Gets the ALSA output format or indicates Not playing.  
+Arguments: None  
+Returns: Output format or "Not playing"
 
 ```
-JSON:
 {"format":"PCM 16\/44.1 kHz, 2ch"}
 {"format":"Not playing"}
 ```
 #### get_volume
 Gets the current Knob volume and mute state.  
-Returns: volume and mute state.
+Arguments: None  
+Returns: Volume and mute state.
 ```
-JSON:
 {"volume":"10","muted":"yes"}
 ```
 #### set_volume
 Sets the knob volume to value N, up or down N or mute toggle.  
 Arguments: `N | -up N | -dn N | -mute`  
-Returns: volume and mute state
+Returns: Volume and mute state
 ```
-JSON:
 {"volume":"15","muted":"no"}
 ```
-#### playitem | playitem_next
-Plays the specified item. If the item does not already exists in the Queue it is
-added at the end of the Queue for `playitem` and for `playitem_next` after the currently selected
-item in the Queue.  
-Arguments: URL | URI relative to MPD music root
+
+#### clear_queue
+Clears the Queue  
+Arguments: None  
 Returns: "OK"
 ```
+{"info":"OK"}
+```
+
+#### play_item | play_item_next
+Plays the specified item.  
+ - If the item is an Radio station or Track and its already in the Queue its played otherwise its added/played.
+ - If the item is an Album or Playlist the Queue is cleared before adding/playing the item.  
+
+Arguments: URL | URI relative to MPD music or playlists root  
+Returns: "OK"
+
 Examples:
-playitem RADIO/Soma FM - Fluid.pls
-playitem http://mediaserv38.live-streams.nl:8006/live
-playitem_next NAS/TRX-FLAC/Yes/The Yes Album/03 Starship Trooper.flac
+```
+# Radio station
+play_item RADIO/Soma FM - Fluid.pls
+play_item http://mediaserv38.live-streams.nl:8006/live
+
+# Playlist
+play_item Default Playlist
+
+# Album
+play_item NAS/TRX-FLAC/Yes/The Yes Album
+
+# Track
+play_item NAS/TRX-FLAC/Yes/The Yes Album/03 Starship Trooper.flac
 ```
 ```
-JSON:
 {"info":"OK"}
 ```
 #### get_cdsp_config
-Gets the current CamillaDSP signal processing config name.
-Returns: config name
+Gets the current CamillaDSP signal processing config name.  
+Arguments: None  
+Returns: "Config name" or "off"
 ```
-JSON:
 {"config":"off"}
 ```
 #### set_cdsp_config
 Sets CamillaDSP to the specified config name.  
-Arguments: A config name from the list of available configs including 'Off'.
-Returns: config name
+Arguments: A config name from the list of available configs including "Off'.  
+Returns: "Config name" or "off"
 ```
-JSON:
 {"config":"V2-ProtoDAC.yml"}
 ```
 #### set_coverview
 Sets CoverView screen saver on or off.  
-Arguments: `-on | -off`
+Arguments: `-on | -off`  
+Returns: "Coverview on | off"
 ```
-JSON:
-{"info":"CoverView off"}
+{"info":"CoverView off"}`
 ```
+
 #### upd_library
-Submits an "Update library" command.
-Arguments: none
-Returns: ""Library update submitted""
+Submits an "Update library" command.  
+Arguments: None  
+Returns: "Library update submitted"
 ```
-JSON:
 {"info":"Library update submitted"}
 ```
+
 #### restart_renderer
 Restarts the specified renderer.  
-Arguments: `--bluetooth | --airplay | --spotify | --squeezelite | --plexamp | --roonbridge`
-Arguments: none
+Arguments: `--bluetooth | --airplay | --spotify | --deezer | --squeezelite | --plexamp | --roonbridge`  
 Returns: "Render restart submitted"
 ```
-JSON:
 {"info":"Render restart submitted"}
 ```
 #### MPD commands
