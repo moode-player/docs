@@ -252,6 +252,26 @@ Returns: "Config name" or "off"
 ```
 {"config":"V2-ProtoDAC.yml"}
 ```
+#### get_receiver_status
+Get multiroom receiver status
+Arguments: None  
+Returns: Receiver status
+```
+{"status":"rx,-Off,15,0,1,sig,239.0.0.1"}
+
+Status fields
+rx, On/Off/Disabled/Unknown, volume, volume_mute_1/0, mastervol_opt_in_1/0, hostname, multicast_addr
+```
+#### set_receiver_onoff
+Set multiroom receiver On/Off
+Arguments: -on | -off
+Returns: Receiver status
+```
+{"status":"rx,-Off,15,0,1,sig,239.0.0.1"}
+
+Status fields
+rx, On/Off/Disabled/Unknown, volume, volume_mute_1/0, mastervol_opt_in_1/0, hostname, multicast_addr
+```
 #### set_coverview
 Sets CoverView screen saver on or off.  
 Arguments: `-on | -off`  
@@ -259,7 +279,6 @@ Returns: "Coverview on | off"
 ```
 {"info":"CoverView off"}`
 ```
-
 #### upd_library
 Submits an "Update library" command.  
 Arguments: None  
