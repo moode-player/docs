@@ -170,7 +170,15 @@ __IMPORTANT!__ The image must be configured with a userid, password and SSH enab
 
 ## 6.1. REST API
 
-The base URL for submitting commands to Moode is `http://moode/command/?cmd=` If a command returns data it is in JSON format following REST guidelines.
+### Syntax
+`http://moode/command/?cmd=REST_API_COMMAND`
+
+`curl -G -S -s --data-urlencode "cmd=REST_API_COMMAND" http://moode/command/`
+
+### Return format
+`If a command returns data it is in JSON format following REST guidelines.`
+
+### Commands
 
 #### get_currentsong
 Gets the contents of the file /var/local/www/currentsong.txt.
