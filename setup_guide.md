@@ -34,7 +34,7 @@ Moode audio player is a Free Open Source Software (FOSS) music streamer for the 
 
 Before you can access Moode a pre-built image must be configured and written to a micro SD Card using the official [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
-__IMPORTANT!__ The image must be configured with a userid, password and SSH enabled or Moode will not function correctly. Refer to the [Pi Imager Tutorial](#4-pi-imager-tutorial) section for step by step instructions.
+__IMPORTANT!__ The image must be configured with a userid, password and SSH enabled or Moode will not function correctly. Refer to the [Pi Imager Tutorial](#5-pi-imager-tutorial) section for step by step instructions.
 
 Download links for the Pi Imager and Moode pre-built images are available on the Download page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
 
