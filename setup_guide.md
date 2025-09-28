@@ -249,9 +249,9 @@ play_item NAS/TRX-FLAC/Yes/The Yes Album/03 Starship Trooper.flac
 #### toggle_play_pause
 Toggles between play/stop for Radio stations and play/pause for song files.  
 Arguments: None  
-Returns: "OK"
+Returns: Play state after toggling
 ```
-{"info":"OK"}
+{"state":"pause"}
 ```
 #### get_cdsp_config
 Gets the current CamillaDSP signal processing config name.  
