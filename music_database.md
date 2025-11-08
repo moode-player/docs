@@ -71,7 +71,7 @@ Entries in the moOde log `moodeutl -l` or `cat /var/log/moode.log`
 20250222 073431 thumb-gen: Px ratio: 3
 20250222 073431 thumb-gen: Th width: 600
 20250222 073431 thumb-gen: Thm qual: 60
-20250222 073431 thumb-gen: Scanning: NAS, NVME, SATA, SDCARD
+20250222 073431 thumb-gen: Scanning: NAS, NVME, OSDISK, SATA USB
 20250222 073435 thumb-gen: Done: 381 folders scanned, 0 thumbs created, 381 already in cache.
 20250222 073443 mpdindex: Done: indexed 296 artists, 380 albums, 4248 songs
 20250222 073443 worker: Job update_library done

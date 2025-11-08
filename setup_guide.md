@@ -75,8 +75,13 @@ There are many other audio device options available for example `Volume type`, `
 - Menu > Update library
 - Stay on the screen and wait for the activity spinner to be cleared
 
-#### Boot SD Card storage
-- Place your music files under the directory `/mnt/SDCARD`
+#### NVMe and SATA Storage
+- Place your music files under the directory `/mnt/NVME or /mnt/SATA`
+- Menu > Update library
+- Stay on the screen and wait for the activity spinner to be cleared
+
+#### Boot media storage
+- Place your music files under the directory `/mnt/OSDISK`
 - Menu > Update library
 - Stay on the screen and wait for the activity spinner to be cleared
 
@@ -109,7 +114,7 @@ The Hotspot starts when one of the following are true.
 
 Moode can be used as a File Server by turning on one or more of the file sharing protocols listed below. These protocols and their respective options are in the File Sharing section of System Config.
 
-- SMB File Sharing. SMB (Samba) shares named NAS, Playlists, and SDCard are automatically created. Each USB disk will also have a Samba share created that is named after its Disk Label.
+- SMB File Sharing. SMB (Samba) shares named NAS, NVMe, OSDisk, SATA and Playlists are automatically created. Each USB disk will also have a Samba share created that is named after its Disk Label.
 
 - NFS File Sharing. Access and option defaults are provided but can be manually overridden. Each USB disk will have an NFS export created whose path is /media/Disk Label.
 

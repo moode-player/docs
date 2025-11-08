@@ -11,7 +11,7 @@ This document describes the function of directories and files in the moode Git r
 |/etc|Text goes here|
 |/home|Text goes here|
 |/lib|Text goes here|
-|/sdcard|Text goes here|
+|/osdisk|Text goes here|
 |/var|Text goes here|
 |/var/lib|Text goes here|
 |__/var/local/php__|Directory containing the PHP session file.|
