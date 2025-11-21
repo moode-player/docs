@@ -2,16 +2,14 @@
 
 Setup Guide <!-- omit in toc -->
 ===============================================
-<span style=""><img src="images/moode-r900-logotype-clear-black-cropped.png"
-width="300px"></span>
-
+# moOde audio player 10 series  
 (C) Tim Curtis 2024  
 (C) @azimuth 2024 Pi Imager tutorial  
 
 ### Table of Contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
-- [2. Creating a boot SD Card](#2-creating-a-boot-sd-card)
+- [2. Creating the boot media](#2-creating-the-boot-media)
 - [3. Starting up the system](#3-starting-up-the-system)
 - [4. After Startup](#4-after-startup)
   - [4.1. Audio Devices](#41-audio-devices)
@@ -30,13 +28,11 @@ Moode audio player is a Free Open Source Software (FOSS) music streamer for the 
 
 [Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf)  contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the Main Menu which is accessed via the `m` in the upper right of the WebUI.
 
-# 2. Creating a boot SD Card
+# 2. Creating the boot media
 
-Before you can access Moode a pre-built image must be configured and written to a micro SD Card using the official [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to download a Moode release image from the `Media Player OS` section, configure it with required login userid/password and SSH terminal access, and optional WiFi SSID/password, then write the image to the boot media. Types of boot media include micro SDcard, USB drive and NVMe drive.
 
-__IMPORTANT!__ The image must be configured with a userid, password and SSH enabled or Moode will not function correctly. Refer to the [Pi Imager Tutorial](#5-pi-imager-tutorial) section for step by step instructions.
-
-Download links for the Pi Imager and Moode pre-built images are available on the Download page at [moodeaudio.org](https://moodeaudio.org) Pre-built images can also be conveniently selected directly in the `Media Player OS` section of the Imager.
+__IMPORTANT!__ The image must be configured with a login userid/password and SSH enabled or Moode will not function correctly. Refer to the [Pi Imager Tutorial](#5-pi-imager-tutorial) section for step by step instructions.
 
 # 3. Starting up the system
 
@@ -97,7 +93,9 @@ There are many other audio device options available for example `Volume type`, `
 
 ## 4.3. Hotspot
 
-Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. Note that since the image does not contain any default passwords the Hotspot password can only be set via the Network Config screen in the WebUI thus the Pi must first be connected via WiFi or Ethernet. Refer to the default settings below.
+Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. __IMPORTANT!__ since the image does not contain any default passwords, the Hotspot password can only be set via the Network Config screen in the WebUI thus the Pi must first be connected via the configured WiFi SSID/passsword or via Ethernet.
+
+Hotspot default settings
 
 |Setting|Value|
 |:-|:-|
@@ -128,9 +126,9 @@ Updates to Moode are available via `CHECK for software update` in System Config.
 
 # 5. Pi Imager Tutorial
 
-Moode requires using the official Raspberry Pi Imager to configure the OS image before writing it to an SD Card. Follow these step by step instructions to carry out this process.
+Moode requires using the official Raspberry Pi Imager to configure the release image before writing it to the boot media. Follow these step by step instructions to carry out this process.
 
-__IMPORTANT!__ The image must be configured with a userid, password and SSH enabled or Moode will not function correctly.
+__IMPORTANT!__ The image must be configured with a login userid/password and SSH enabled or Moode will not function correctly.
 
 1. [Download](https://www.raspberrypi.com/software/) the official Raspberry Pi Imager.
 <div style="margin-bottom:1em"><img src="images/imager_1.png" width="400px"></div>
