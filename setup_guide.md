@@ -2,7 +2,8 @@
 
 Setup Guide <!-- omit in toc -->
 ===============================================
-# moOde audio player 10 series  
+
+## m<span style="color:#DD6900">oO</span>de audio player 10 series
 (C) Tim Curtis 2024  
 (C) @azimuth 2024 Pi Imager tutorial  
 
@@ -315,21 +316,12 @@ Returns: "Render restart submitted"
 #### MPD commands
 See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands and returns.
 
-#### Deprecated REST API commands.
-In Moode 9 series the following commands have been replaced by the equivalent new commands above and at some point will not be supported. It is recommended to update your scripts to use the new commands.
-
-- vol.sh
-- coverview.php
-- libupd-submit.php
-- restart-renderer.php
-
 ## 6.2. SSH Commands
 
 There are several useful commands that can be run at the prompt in an SSH terminal.
 
 #### moodeutl
-This command can be used for printing logs, status or for manipulating certain
-parts of Moode.  
+This command can be used for printing logs, status or for manipulating various parts of Moode.  
 `moodeutl --help`.
 
 #### mpc
