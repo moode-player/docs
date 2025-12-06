@@ -151,14 +151,15 @@ __IMPORTANT!__ The image must be configured with a login userid/password and SSH
 <div style="margin-bottom:1em"><img src="images/imager2_7.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager2_8.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager2_9.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager2_10.png" width="400px"></div>
 
 7. Write the image to the storage device.
-<div style="margin-bottom:1em"><img src="images/imager2_10.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager2_11.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager2_12.png" width="400px"></div>
 <div style="margin-bottom:1em"><img src="images/imager2_13.png" width="400px"></div>
-8. After verification is complete the boot media can be removed from the drive and inserted into a Raspberry Pi for initial startup.
 <div style="margin-bottom:1em"><img src="images/imager2_14.png" width="400px"></div>
+8. After verification is complete the boot media can be removed from the drive and inserted into a Raspberry Pi for initial startup.
+<div style="margin-bottom:1em"><img src="images/imager2_15.png" width="400px"></div>
 
 [Back to Top](#setup-guide-)
 
