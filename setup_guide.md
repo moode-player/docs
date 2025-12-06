@@ -129,7 +129,7 @@ Updates to Moode are available via `CHECK for software update` in System Config.
 
 Moode requires using the official Raspberry Pi Imager to configure the release image before writing it to the boot media. Follow these step by step instructions to carry out this process.
 
-__IMPORTANT!__ The image must be configured with a _login userid/password_ and _SSH enabled_ or Moode will not function correctly.
+__IMPORTANT!__ The image must be configured with a `login userid/password` and `SSH enabled` or Moode will not function correctly.
 
 1. Select a Raspberry Pi device.
 
