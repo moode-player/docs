@@ -5,7 +5,7 @@ Setup Guide <!-- omit in toc -->
 
 ## m<span style="color:#DD6900">oO</span>de audio player 10 series
 (C) Tim Curtis 2024  
-(C) @azimuth 2024 Pi Imager tutorial  
+(C) @azimuth 2024 Pi Imager 1.x tutorial
 
 ### Table of Contents <!-- omit in toc -->
 
@@ -131,42 +131,34 @@ Moode requires using the official Raspberry Pi Imager to configure the release i
 
 __IMPORTANT!__ The image must be configured with a login userid/password and SSH enabled or Moode will not function correctly.
 
-1. [Download](https://www.raspberrypi.com/software/) the official Raspberry Pi Imager.
-<div style="margin-bottom:1em"><img src="images/imager_1.png" width="400px"></div>
+1. Select a Raspberry Pi device.
+<div style="margin-bottom:1em"><img src="images/imager2_1.png" width="400px"></div>
 
-2. Click CHOOSE OS and scroll down to `Media Player OS` and then to `moOde audio player` and then click the version of moOde you would like to install.
-<div style="margin-bottom:1em"><img src="images/imager_2.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="images/imager_3.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="images/imager_4.png" width="400px"></div>
+2. Choose an Operating System. Scroll down and select `Media Player OS`.
+<div style="margin-bottom:1em"><img src="images/imager2_2.png" width="400px"></div>
 
-  Or if you have downloaded moOde directly from the Download page at [moodeaudio.org](https://moodeaudio.org), then scroll down to `Use custom` and select the downloaded zip file from the file chooser.
-<div style="margin-bottom:1em"><img src="images/imager_5.png" width="400px"></div>
+3. Select moOde audio player.
+<div style="margin-bottom:1em"><img src="images/imager2_3.png" width="400px"></div>
 
-3. After the OS is selected click `CHOOSE STORAGE` then click the SD card drive where the OS image will be written.
-<div style="margin-bottom:1em"><img src="images/imager_6.png" width="400px"></div>
+4. Select the specific moOde audio player release.
+<div style="margin-bottom:1em"><img src="images/imager2_4.png" width="400px"></div>
 
-4. Click `NEXT` to display the `OS customization` screen
-<div style="margin-bottom:1em"><img src="images/imager_7.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="images/imager_8.png" width="400px"></div>
+5. Select the storage device for writing the image.
+<div style="margin-bottom:1em"><img src="images/imager2_5.png" width="400px"></div>
 
-5. Click `EDIT SETTINGS` to display the `OS customization` screen. On the `GENERAL` tab enter your desired hostname, userid and password, optional WiFi SSID and password and finally the Locale.
-<div style="margin-bottom:1em"><img src="images/imager_9.png" width="400px"></div>
+6. Customize the image.
+<div style="margin-bottom:1em"><img src="images/imager2_6.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager2_7.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager2_8.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager2_9.png" width="400px"></div>
 
-6. Click the `SERVICES` tab and enable SSH with password authentication.
-<div style="margin-bottom:1em"><img src="images/imager_10.png" width="400px"></div>
-
-7. Click SAVE which will return you to the `OS Customization` screen.
-<div style="margin-bottom:1em"><img src="images/imager_11.png" width="400px"></div>
-
-8. Click `YES` to apply the customizations and display the confirmation screen.
-<div style="margin-bottom:1em"><img src="images/imager_12.png" width="400px"></div>
-
-9. Click `YES` to proceed and write the OS image to the SD Card and automatically verify it after the write completes.
-<div style="margin-bottom:1em"><img src="images/imager_13.png" width="400px"></div>
-<div style="margin-bottom:1em"><img src="images/imager_14.png" width="400px"></div>
-
-10. After verification is complete the SD Card can be removed from the drive and inserted into a Raspberry Pi for initial startup.
-<div style="margin-bottom:1em"><img src="images/imager_15.png" width="400px"></div>
+7. Write the image to the storage device.
+<div style="margin-bottom:1em"><img src="images/imager2_10.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager2_11.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager2_12.png" width="400px"></div>
+<div style="margin-bottom:1em"><img src="images/imager2_13.png" width="400px"></div>
+8. After verification is complete the boot media can be removed from the drive and inserted into a Raspberry Pi for initial startup.
+<div style="margin-bottom:1em"><img src="images/imager2_14.png" width="400px"></div>
 
 [Back to Top](#setup-guide-)
 
