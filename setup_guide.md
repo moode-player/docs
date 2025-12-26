@@ -262,14 +262,14 @@ Returns: Play state after toggling
 #### get_cdsp_config
 Gets the current CamillaDSP signal processing config name.  
 Arguments: None  
-Returns: "Config name" or "off"
+Returns: "Config name or off
 ```
 {"config":"off"}
 ```
 #### set_cdsp_config
 Sets CamillaDSP to the specified config name.  
 Arguments: A config name from the list of available configs including "Off'.  
-Returns: "Config name" or "off"
+Returns: Config name or off
 ```
 {"config":"V2-ProtoDAC.yml"}
 ```
@@ -296,14 +296,14 @@ rx, On/Off/Disabled/Unknown, volume, volume_mute_1/0, mastervol_opt_in_1/0, host
 #### set_coverview
 Sets CoverView screen saver on or off.  
 Arguments: `-on | -off`  
-Returns: "Coverview on | off"
+Returns: On/off state
 ```
 {"info":"CoverView off"}`
 ```
 #### upd_library
 Submits an "Update library" command.  
 Arguments: None  
-Returns: "Library update submitted"
+Returns: Info confirmation
 ```
 {"info":"Library update submitted"}
 ```
@@ -311,7 +311,7 @@ Returns: "Library update submitted"
 #### restart_renderer
 Restarts the specified renderer.  
 Arguments: `--bluetooth | --airplay | --spotify | --deezer | --squeezelite | --plexamp | --roonbridge`  
-Returns: "Renderer restart submitted"
+Returns: Info confirmation
 ```
 {"info":"Renderer restart submitted"}
 ```
@@ -319,7 +319,7 @@ Returns: "Renderer restart submitted"
 #### renderer_onoff
 Turns the specified renderer on or off  
 Arguments: `--bluetooth | --airplay | --spotify | --deezer | --squeezelite | --plexamp | --roonbridge [on|off]`  
-Returns: "Renderer [name] [on|off] submitted"
+Returns: Info confirmation
 ```
 {"info":"Renderer --airplay on submitted"}
 ```
@@ -327,7 +327,7 @@ Returns: "Renderer [name] [on|off] submitted"
 #### set_display
 Sets locally attached display to WebUI or Peppy or Toggles between them
 Arguments: `webui | peppy | toggle`  
-Returns: "Set display to [webui|peppy|toggle] submitted"
+Returns: Info confirmation
 ```
 {"info":"Set display to peppy submitted"}
 ```
