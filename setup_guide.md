@@ -311,9 +311,25 @@ Returns: "Library update submitted"
 #### restart_renderer
 Restarts the specified renderer.  
 Arguments: `--bluetooth | --airplay | --spotify | --deezer | --squeezelite | --plexamp | --roonbridge`  
-Returns: "Render restart submitted"
+Returns: "Renderer restart submitted"
 ```
-{"info":"Render restart submitted"}
+{"info":"Renderer restart submitted"}
+```
+
+#### renderer_onoff
+Turns the specified renderer on or off  
+Arguments: `--bluetooth | --airplay | --spotify | --deezer | --squeezelite | --plexamp | --roonbridge [on|off]`  
+Returns: "Renderer [name] [on|off] submitted"
+```
+{"info":"Renderer --airplay on submitted"}
+```
+
+#### set_display
+Sets locally attached display to WebUI or Peppy or Toggles between them
+Arguments: `webui | peppy | toggle`  
+Returns: "Set display to [webui|peppy|toggle] submitted"
+```
+{"info":"Set display to peppy submitted"}
 ```
 #### MPD commands
 See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands and returns.
