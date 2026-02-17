@@ -21,7 +21,7 @@ Setup Guide <!-- omit in toc -->
 - [5. Pi Imager Tutorial](#5-pi-imager-tutorial)
 - [6. Advanced](#6-advanced)
   - [6.1. REST API](#61-rest-api)
-  - [6.2. SSH Commands](#62-ssh-commands)
+  - [6.2. CLI Commands](#62-cli-commands)
 
 # 1. Introduction
 
@@ -334,32 +334,36 @@ Returns: Info confirmation
 #### MPD commands
 See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands and returns.
 
-## 6.2. SSH Commands
+## 6.2. CLI Commands
 
 There are several useful commands that can be run at the prompt in an SSH terminal.
 
 #### moodeutl
-This command can be used for printing logs, status or for manipulating various parts of Moode.  
+Used for printing logs, status or for manipulating various parts of Moode.  
 `moodeutl --help`.
 
 #### mpc
-This command can be used to control MPD.  
+Used to control MPD.  
 `mpc help`.
 
 #### vol.sh
-This command can be used to get or set MPD volume and update the Volume Knob.  
+Used to get or set MPD volume and update the Volume Knob.  
 `/var/www/util/vol.sh --help`.
 
 #### libupd-submit.php
-This command performs the equivalent of Menu > Update library. Run using sudo.
+Performs the equivalent of Menu > Update library. Run using sudo.
 `sudo /var/www/util/libupd-submit.php`
 
 #### coverview.php
-This command turns the CoverView screen saver on or off.  
+Turn the CoverView screen saver on or off.  
 `/var/www/util/coverview.php -on | -off`
 
 #### restart-renderer.php
-This command restarts the specified renderer.  
+Restarts the specified renderer.  
 `/var/www/util/restart-renderer.php --help`  
+
+#### set-btaudio.php
+Set Bluetooth audio output to Local or Bluetooth speaker and automatically disconnect or connect.  
+`sudo /var/www/util/set-btaudio.php --help`
 
 [Back to Top](#setup-guide-)
