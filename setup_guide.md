@@ -351,7 +351,7 @@ Used to get or set MPD volume and update the Volume Knob.
 `/var/www/util/vol.sh --help`.
 
 #### libupd-submit.php
-Performs the equivalent of Menu > Update library. Run using sudo.
+Performs the equivalent of Menu > Update library. Run using sudo.  
 `sudo /var/www/util/libupd-submit.php`
 
 #### coverview.php
@@ -359,11 +359,15 @@ Turn the CoverView screen saver on or off.
 `/var/www/util/coverview.php -on | -off`
 
 #### restart-renderer.php
-Restarts the specified renderer.  
-`/var/www/util/restart-renderer.php --help`  
+Restarts the specified renderer. Run using sudo  
+`sudo /var/www/util/restart-renderer.php --help`  
 
 #### set-btaudio.php
-Set Bluetooth audio output to Local or Bluetooth speaker and automatically disconnect or connect.  
+Set Bluetooth audio output to Local or Bluetooth speaker and automatically disconnect or connect. Run using sudo.  
 `sudo /var/www/util/set-btaudio.php --help`
+
+#### eqctl.php
+Set Graphic or Parametric EQ curves. Run using sudo.  
+`sudo /var/www/util/eqctl.php --help`
 
 [Back to Top](#setup-guide-)
