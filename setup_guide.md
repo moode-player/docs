@@ -262,16 +262,35 @@ Returns: Play state after toggling
 #### get_cdsp_config
 Gets the current CamillaDSP signal processing config name.  
 Arguments: None  
-Returns: "Config name or off
+Returns: Config name or "off"
 ```
 {"config":"off"}
 ```
 #### set_cdsp_config
 Sets CamillaDSP to the specified config name.  
-Arguments: A config name from the list of available configs including "Off'.  
-Returns: Config name or off
+Arguments: A config name from the list of available configs including "Off".  
+Returns: Config name or "off"
 ```
 {"config":"V2-ProtoDAC.yml"}
+```
+#### get_eq_status
+Gets the current Graphic EQ or Parametric EQ status.  
+Arguments: None  
+Returns:  EQ status
+```
+{"status":"none|0|Off"}
+{"status":"graphic|3|Lo Boost Plus}
+
+Status fields  
+eq_type|curve_index|curve_name or "Off"
+```
+#### set_eq_curve
+Sets the Graphic EQ or Parametric EQ to the specified curve name, curve index or "Off"  
+Arguments: `[graphic|parametric] [curve_name|curve_index|Off]`  
+Returns: Status or error
+```
+{"status":"graphic|3|Lo Boost Plus"}
+{"error":"Disable CamillaDSP first"}
 ```
 #### get_receiver_status
 Get multiroom receiver status  
