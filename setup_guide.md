@@ -25,13 +25,17 @@ Setup Guide <!-- omit in toc -->
 
 # 1. Introduction
 
-Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter `http://moode, moode.local or ip_address` in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS or Android to create a moOde App.
+Moode audio player is a Free Open Source Software (FOSS) music streamer for the wonderful Raspberry Pi family of Single Board Computers (SBC). To access the player enter `http://moode, moode.local or ip_address` in a Web Browser. If you are using a Smartphone use the "Save to Home Screen" option on IOS to create a moOde App. To do the same on Android you must first enable HTTPS mode in Moode System Config.
 
-[Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf)  contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the Main Menu which is accessed via the `m` in the upper right of the WebUI.
+[Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf) contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the Main Menu which is accessed via the `m` in the upper right of the WebUI.
 
 # 2. Creating the boot media
 
-Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to download a Moode release image from the `Media Player OS` section, configure it with required login userid/password and SSH terminal access, and optional WiFi SSID/password, then write the image to the boot media. Types of boot media include micro SDcard, USB drive and NVMe drive.
+Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to configure and install the latest Moode release on the boot media. Moode releases are available in the Media Player OS section
+
+- The boot media must be at least 16GB.
+- Supported types: Micro SDcard, USB drive, NVMe drive eMMC drive.
+- Use high quality boot media for optimum performance and reliability.
 
 __IMPORTANT!__ The image must be configured with a login userid/password and SSH enabled or Moode will not function correctly. Refer to the [Pi Imager Tutorial](#5-pi-imager-tutorial) section for step by step instructions.
 
