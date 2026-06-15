@@ -10,18 +10,19 @@ Setup Guide <!-- omit in toc -->
 ### Table of Contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
-- [2. Creating the boot media](#2-creating-the-boot-media)
-- [3. Starting up the system](#3-starting-up-the-system)
-- [4. After Startup](#4-after-startup)
-  - [4.1. Audio Devices](#41-audio-devices)
-  - [4.2. Music Files](#42-music-files)
-  - [4.3. Hotspot](#43-hotspot)
-  - [4.4. File Sharing](#44-file-sharing)
-  - [4.5. Software Updates](#45-software-updates)
-- [5. Pi Imager Tutorial](#5-pi-imager-tutorial)
-- [6. Advanced](#6-advanced)
-  - [6.1. REST API](#61-rest-api)
-  - [6.2. CLI Commands](#62-cli-commands)
+- [2. General requirements](#2-general-requirements)
+- [3. Creating the boot media](#3-creating-the-boot-media)
+- [4. Starting up the system](#4-starting-up-the-system)
+- [5. After Startup](#5-after-startup)
+  - [5.1. Audio Devices](#51-audio-devices)
+  - [5.2. Music Files](#52-music-files)
+  - [5.3. Hotspot](#53-hotspot)
+  - [5.4. File Sharing](#54-file-sharing)
+  - [5.5. Software Updates](#55-software-updates)
+- [6. Pi Imager Tutorial](#6-pi-imager-tutorial)
+- [7. Advanced](#7-advanced)
+  - [7.1. REST API](#71-rest-api)
+  - [7.2. CLI Commands](#72-cli-commands)
 
 # 1. Introduction
 
@@ -29,27 +30,36 @@ Moode audio player is a Free Open Source Software (FOSS) music streamer for the 
 
 [Quick help](https://github.com/moode-player/docs/blob/main/Quickhelp.pdf) contains instructions for navigating Moode and using its features including Multiroom audio. Quick help is located on the Main Menu which is accessed via the `m` in the upper right of the WebUI.
 
-# 2. Creating the boot media
+# 2 General requirements
+
+- 64-bit Raspberry Pi
+- At least 16GB boot media
+- At least 1GB RAM to support on-demand build/install of the Spotify Connect package
+- Supported boot media includes Micro SDcard, USB drive, NVMe drive and eMMC drive
+- Use high quality boot media for optimum performance and reliability
+- Limitations for models with 512MB RAM (Pi Zero 2W and Pi 3A+)
+  - Does not support on-demand build/install of the Spotify Connect package due to lack of RAM. In this case use an existing Spotify Connect package which was built on a different machine and install it directly using `sudo moodeutl --installpkg spotify`
+  - The WebUI won't load on an attached local display because the chromium-browser process needs more RAM
+  - Large music libraries in excess of 8000 folders / 90,000 tracks may cause out-of-memory (OOM) issues
+    See https://moodeaudio.org/forum/showthread.php?tid=8385
+
+# 3. Creating the boot media
 
 Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to configure and install the latest Moode release on the boot media. Moode releases are available in the Media Player OS section
 
-- The boot media must be at least 16GB.
-- Supported types: Micro SDcard, USB drive, NVMe drive eMMC drive.
-- Use high quality boot media for optimum performance and reliability.
-
 __IMPORTANT!__ The image must be configured with a login userid/password and SSH enabled or Moode will not function correctly. Refer to the [Pi Imager Tutorial](#5-pi-imager-tutorial) section for step by step instructions.
 
-# 3. Starting up the system
+# 4. Starting up the system
 
 The first startup will take a while. The system automatically reboots 3 times after initially starting to import and apply the settings from the Pi Imager and complete Moode startup configuration.
 
-# 4. After Startup
+# 5. After Startup
 
 After Moode starts up and you access it in your Web Browser you can configure your audio device, add music files to create your Library, connect an HDMI display and make use of all the advanced, Audiophile-grade features to create a great listening experience.
 
 [Back to Top](#setup-guide-)
 
-## 4.1. Audio Devices
+## 5.1. Audio Devices
 
 #### USB audio device
 - Plug in the device
@@ -69,7 +79,7 @@ After Moode starts up and you access it in your Web Browser you can configure yo
 
 There are many other audio device options available for example `Volume type`, `Chip options`, and `ALSA output mode` just to name a few. For more information on a given option read the help text underneath it or the expandable info help next to it.
 
-## 4.2. Music Files
+## 5.2. Music Files
 
 #### USB storage device
 - Plug in the device
@@ -96,7 +106,7 @@ There are many other audio device options available for example `Volume type`, `
 - Menu > Update library
 - Stay on the screen and wait for the activity spinner to be cleared
 
-## 4.3. Hotspot
+## 5.3. Hotspot
 
 Moode provides a WiFi Hotspot on the 2.4 GHz WiFi band. __IMPORTANT!__ since the image does not contain any default passwords, the Hotspot password can only be set via the Network Config screen in the WebUI thus the Pi must first be connected via the configured WiFi SSID/passsword or via Ethernet.
 
@@ -113,7 +123,7 @@ The Hotspot starts when one of the following are true.
 - WiFi SSID is set to "Activate Hotspot" in Network Config.
 - WiFi SSID is configured in Network Config but no IP address was assigned after attempting to connect to the configured SSID or any saved SSID's.
 
-## 4.4. File Sharing
+## 5.4. File Sharing
 
 Moode can be used as a File Server by turning on one or more of the file sharing protocols listed below. These protocols and their respective options are in the File Sharing section of System Config.
 
@@ -123,13 +133,13 @@ Moode can be used as a File Server by turning on one or more of the file sharing
 
 - DLNA File Sharing. The DLNA media server indexes music sources defined for MPD and makes them available to a UPnP control point.
 
-## 4.5. Software Updates
+## 5.5. Software Updates
 
 Updates to Moode are available via `CHECK for software update` in System Config. The updates are keyed to a major release series for example Moode 9. There are no in-place updates across major releases for example Moode 8 to Moode 9. Each new major release requires a fresh image.
 
 [Back to Top](#setup-guide-)
 
-# 5. Pi Imager Tutorial
+# 6. Pi Imager Tutorial
 
 Moode requires using the official Raspberry Pi Imager to configure the release image before writing it to the boot media. Follow these step by step instructions to carry out this process.
 
@@ -176,9 +186,9 @@ __IMPORTANT!__ The image must be configured with a `login userid/password` and `
 
 [Back to Top](#setup-guide-)
 
-# 6. Advanced
+# 7. Advanced
 
-## 6.1. REST API
+## 7.1. REST API
 
 ### Syntax
 `http://moode/command/?cmd=REST_API_COMMAND`
@@ -357,7 +367,7 @@ Returns: Info confirmation
 #### MPD commands
 See [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for list of commands and returns.
 
-## 6.2. CLI Commands
+## 7.2. CLI Commands
 
 There are several useful commands that can be run at the prompt in an SSH terminal.
 
