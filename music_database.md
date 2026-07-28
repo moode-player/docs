@@ -31,7 +31,7 @@ The Album cover thumbnail cache is generated or updated by the Thumbnail Generat
 
 ##### Embedded images
 
-Supported formats include MP3, FLAC and M4A (ALAC/AAC). The last track in each Album directory is used to look for embedded cover art.
+Supported formats include DSF, MP3, FLAC and M4A (ALAC/AAC). The last track in each Album directory is used to look for embedded cover art.
 
 ##### Cover image files
 
