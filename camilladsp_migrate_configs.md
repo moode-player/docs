@@ -49,7 +49,13 @@ IMAGE
 - Click the `New blank config` button
 - Click the `Import config` button
 - Click the config file to be imported
+
+IMAGE
+
 - Select what to import, the top checkbox selects all items
+
+IMAGE
+
 - Click the `Import` button
 - Click the `X` to close the Import screen
 
@@ -61,6 +67,6 @@ IMAGE
 
 - Click the `Save` icon
 
-The updated file will appear in the Configs list with a green check.
+The updated file will appear in the Configs list with a check mark.
 
 IMAGE
