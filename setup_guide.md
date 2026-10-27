@@ -343,7 +343,7 @@ Returns: Info confirmation
 
 #### restart_renderer
 Restarts the specified renderer.  
-Arguments: `--bluetooth | --airplay | --spotify | --deezer | --squeezelite | --plexamp | --roonbridge`  
+Arguments: `--bluetooth | --airplay | --spotify | --qobuz | --squeezelite | --plexamp | --roonbridge`  
 Returns: Info confirmation
 ```
 {"info":"Renderer restart submitted"}
@@ -351,7 +351,7 @@ Returns: Info confirmation
 
 #### renderer_onoff
 Turns the specified renderer on or off  
-Arguments: `--bluetooth | --airplay | --spotify | --deezer | --squeezelite | --plexamp | --roonbridge [on|off]`  
+Arguments: `--bluetooth | --airplay | --spotify | --qobuz | --squeezelite | --plexamp | --roonbridge [on|off]`  
 Returns: Info confirmation
 ```
 {"info":"Renderer --airplay on submitted"}
