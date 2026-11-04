@@ -1,7 +1,7 @@
 moOde API Reference <!-- omit in toc -->
 ==========================================
 By: @Gjuju (c) 2026
-Updated: 2026-10-26
+Updated: 2026-11-04
 
 This document lists every HTTP endpoint the moOde back-end exposes: the REST API meant for external clients, and the controllers the WebUI calls through AJAX. It replaces the REST API section that used to be in the Setup Guide.
 
@@ -76,7 +76,7 @@ The other controllers take extra arguments as separate query parameters (`GET`) 
 
 # 2. REST API (command/index.php)
 
-The REST API is the supported interface for external clients. Volume and transport commands follow whatever source is playing: MPD, an input source, or a renderer (Bluetooth, AirPlay, Qobuz Connect, Squeezelite).
+The REST API is the supported interface for external clients. Volume and transport commands follow whatever source is playing: MPD, an input source, or a renderer (Bluetooth, AirPlay, Spotify Soloist, Qobuz Connect, Squeezelite).
 
 ## 2.1. Playback and queue
 
@@ -120,7 +120,7 @@ Returns: Nothing
 #### toggle_play_pause
 Toggles playback of the active source.
 - MPD: play/stop for a Radio station, play/pause for a song file.
-- Bluetooth, AirPlay, Qobuz Connect, Squeezelite: sent to the renderer.
+- Bluetooth, AirPlay, Spotify Soloist, Qobuz Connect, Squeezelite: sent to the renderer.
 - Other sources: handled by MPD, as above.
 
 Arguments: None  
@@ -134,7 +134,7 @@ Returns: The resulting state. A renderer that does not report it returns `toggle
 
 #### next | previous
 Skips to the next or previous item.
-- Bluetooth, AirPlay, Qobuz Connect, Squeezelite: sent to the renderer. The renderer applies its own rules (for example `previous` past the first seconds of a track restarts it).
+- Bluetooth, AirPlay, Spotify Soloist, Qobuz Connect, Squeezelite: sent to the renderer. The renderer applies its own rules (for example `previous` past the first seconds of a track restarts it).
 - Other sources: relayed to MPD (see [2.7](#27-mpd-commands)).
 
 Arguments: None  
@@ -154,12 +154,12 @@ The volume is set where it lives for the active source, reported as `scope`:
 | MPD | Software | `mpd` | MPD (`vol.sh`) |
 | MPD | CamillaDSP | `camilladsp` | CamillaDSP, through MPD and `mpd2cdspvolume` |
 | MPD, Input | Fixed (0dB) | `fixed` | Nowhere |
-| Bluetooth, AirPlay, Qobuz Connect, Squeezelite | any | `source` | The renderer itself |
+| Bluetooth, AirPlay, Spotify Soloist, Qobuz Connect, Squeezelite | any | `source` | The renderer itself |
 | Spotify Connect, RoonBridge, Plexamp | any | `source` | Not controllable from moOde |
 
 During a renderer session moOde keeps the DAC and CamillaDSP at the session maximum, so only the renderer's own volume moves. Multiroom receivers follow MPD volume changes; during a renderer session they are already at their maximum.
 
-If several renderer flags are set at once, the source is the first one in this order: Input, Bluetooth, AirPlay, Spotify, Qobuz, RoonBridge, Plexamp, Squeezelite.
+If several renderer flags are set at once, the source is the first one in this order: Input, Bluetooth, AirPlay, Spotify, Soloist, Qobuz, RoonBridge, Plexamp, Squeezelite.
 
 #### get_volume
 Gets the volume of the active source, where it lives and what can be controlled.  
@@ -170,7 +170,7 @@ Returns: Volume state
 |---|---|
 | `volume` | Volume 0-100, as a string. For MPD and Input it is the knob level, also when `scope` is `fixed`. `null` if a renderer does not answer. |
 | `muted` | `yes` or `no` |
-| `source` | `mpd`, `input`, `bluetooth`, `airplay`, `spotify`, `qobuz`, `squeezelite`, `plexamp`, `roonbridge` |
+| `source` | `mpd`, `input`, `bluetooth`, `airplay`, `spotify`, `soloist`, `qobuz`, `squeezelite`, `plexamp`, `roonbridge` |
 | `scope` | See the table above |
 | `can_volume`, `can_mute`, `can_transport` | `true` or `false` |
 | `alert` | Present when `can_volume` is `false` |
@@ -234,7 +234,7 @@ Returns: Status, or an error
 
 #### restart_renderer
 Restarts the specified renderer.  
-Arguments: `--bluetooth | --airplay | --spotify | --qobuz | --upnp | --squeezelite | --plexamp | --roonbridge` (only the renderers enabled on this build)  
+Arguments: `--bluetooth | --airplay | --spotify | --qobuz | --soloist | --upnp | --squeezelite | --plexamp | --roonbridge` (only the renderers enabled on this build)  
 Returns: Confirmation, or an alert
 ```
 {"info":"Renderer restart submitted"}
@@ -441,7 +441,7 @@ Every command returns `{"success":true|false, ...}`. Arguments come from the que
 | cmd | Arguments | Returns |
 |---|---|---|
 | `disconnect_renderer` | POST `job` (renderer service, e.g. `slsvc`, `pasvc`, `multiroom_rx`) | Job |
-| `get_aplmeta`, `get_spotmeta`, `get_qbzmeta`, `get_btmeta` | — | The renderer's metadata cache (AirPlay, Spotify, Qobuz, Bluetooth) |
+| `get_aplmeta`, `get_spotmeta`, `get_solmeta`, `get_qbzmeta`, `get_btmeta` | — | The renderer's metadata cache (AirPlay, Spotify, Spotify Soloist, Qobuz, Bluetooth) |
 | `bt_pair_response` | POST `id`, `accepted`, `code` | `"ok"` or `"failed"`; answers a Bluetooth pairing request |
 
 ## 4.8. command/multiroom.php
