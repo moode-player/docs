@@ -132,6 +132,22 @@ Returns: The resulting state. A renderer that does not report it returns `toggle
 {"alert":"Playback cannot be controlled from moOde for Bluetooth"}
 ```
 
+#### play | pause
+Sets the playback state of the active source. Nothing is sent when it is already in that state.
+- MPD: `pause` stops a Radio station and pauses a song file.
+- Bluetooth, AirPlay, Spotify Soloist, Qobuz Connect, Squeezelite: sent to the renderer.
+- Other sources: handled by MPD, as above.
+- With an argument (`play SONGPOS`, `pause 0|1`) the command is relayed to MPD as is (see [2.7](#27-mpd-commands)).
+
+Arguments: None  
+Returns: The resulting state. A renderer returns the command sent to it.
+```
+{"state":"play"}
+{"state":"pause"}
+{"state":"stop"}
+{"alert":"Playback cannot be controlled from moOde for Bluetooth"}
+```
+
 #### next | previous
 Skips to the next or previous item.
 - Bluetooth, AirPlay, Qobuz Connect, Squeezelite: sent to the renderer. The renderer applies its own rules (for example `previous` past the first seconds of a track restarts it).
@@ -300,7 +316,7 @@ Returns: Confirmation
 
 ## 2.7. MPD commands
 
-Any other command is sent as is to MPD, and the response is returned as JSON. See the [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for the commands and their results. `play`, `pause` and `stop` always go to MPD, also during a renderer session.
+Any other command is sent as is to MPD, and the response is returned as JSON. See the [MPD protocol](https://mpd.readthedocs.io/en/latest/protocol.html) for the commands and their results. `stop`, and `play` or `pause` with an argument, always go to MPD, also during a renderer session.
 ```
 curl -G -S -s --data-urlencode "cmd=status" http://moode/command/
 ```
