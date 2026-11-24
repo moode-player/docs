@@ -229,6 +229,13 @@ Returns: Status, or an error
 {"status":"graphic|3|Lo Boost Plus"}
 {"error":"Disable CamillaDSP first"}
 ```
+#### get_audioinfo
+Gets the information presented on the Audio info screen.  
+Arguments: None  
+Returns: `Audio information`
+```
+{"file":"http:\/\/ice1.somafm.com\/beatblender-128-aac","encoded_at":"AAC Compression","decoded_to":"PCM 16 bit 44.1 kHz, Stereo","decode_rate":", 128 kbps","alsa_output_format":"PCM 16 bit 44.1 kHz, Stereo, 1.411 Mbps","alsa_output_mode":"Default (plughw)","audio_output_chain":"MPD -> PeppyALSA -> plughw -> Device","alsa_loopback":"off","resample_format":"Off","resample_quality":"Off","selective_resample":"Off","polarity_inv":"off","crossfade":"off","peq":"off","geq":"off","camilladsp":"Off","volume_mixer":"Hardware (On-chip)","volume_levels":"Knob 45, ALSA -21.00dB, CDSP -36dB","replaygain":"off","vol_normalize":"off","chip_options":"FIR interpolation with de-emphasis, Gain=0dB, Boost=0dB","devname":"HiFiBerry DAC+ ADC","mixer_name":"Digital","dacchip":"Burr Brown PCM5122, PCM1861 ADC","iface":"I2S","audio_formats":"S16_LE, S24_LE, S32_LE","hdwr_rev":"Pi-5B 1.0 4GB"}
+```
 
 ## 2.4. Renderers and display
 
